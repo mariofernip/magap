@@ -11,6 +11,7 @@ package com.magapinv.www.logicanegocios.clases;
 public class Funcionario {
     private String cedula;
     private String nombres;
+    private String apellidos;
     private String numerostelefonicos;
     private String correo;
 
@@ -55,6 +56,20 @@ public class Funcionario {
         this.nombres = nombres;
         this.numerostelefonicos = numerostelefonicos;
         this.correo = correo;
+    }
+
+    /**
+     * @return the apellidos
+     */
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    /**
+     * @param apellidos the apellidos to set
+     */
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
     
     
