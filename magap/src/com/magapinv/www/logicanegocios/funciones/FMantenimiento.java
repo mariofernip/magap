@@ -32,7 +32,7 @@ public class FMantenimiento {
                 codigo=cres.getInt(0);
             }
         } catch (Exception ex) {
-           throw new Exception("Error al insertar un Funcionario Rol"+ex.getMessage());
+           throw new Exception("Error al insertar un Funcionario Mantenimiento"+ex.getMessage());
         }
     
     return codigo;

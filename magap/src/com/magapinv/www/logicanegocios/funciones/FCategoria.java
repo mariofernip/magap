@@ -14,7 +14,7 @@ import java.util.ArrayList;
  *
  * @author User
  */
-public class FCategoria {
+public class FCategoria { 
     
     //INSERTA UNA CATEGORIA
     

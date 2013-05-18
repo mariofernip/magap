@@ -37,7 +37,7 @@ public class FInventario {
         } catch (Exception ex) {
            throw new Exception("Error al insertar un Inventario"+ex.getMessage());
         }
-    
+     
     return codigo;
     }
     

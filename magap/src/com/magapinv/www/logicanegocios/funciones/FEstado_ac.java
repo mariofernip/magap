@@ -8,6 +8,7 @@ import com.magapinv.www.accesodatos.AccesoDatos;
 import com.magapinv.www.accesodatos.ConjuntoResultado;
 import com.magapinv.www.accesodatos.Parametro;
 import com.magapinv.www.logicanegocios.clases.Estado_ac;
+import java.sql.SQLException;
 import java.util.ArrayList;
 /**
  *
@@ -15,7 +16,7 @@ import java.util.ArrayList;
  */
 public class FEstado_ac {
     
-     public static int insertarEstado (Estado_ac estado) throws Exception{
+     public static int insertarEstado_ac (Estado_ac estado) throws Exception{
     int codigo=-1;
     ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
     String sql ="Select * from bodega.insert_estado_ac(?)";
@@ -33,5 +34,35 @@ public class FEstado_ac {
     return codigo;
     }
     
-    
+     
+      public static ArrayList<Estado_ac> llenarEstado_ac(ConjuntoResultado crs) throws Exception {
+        ArrayList<Estado_ac> lstD = new ArrayList<Estado_ac>();
+        Estado_ac dls =null;
+        try {
+            while (crs.next()) {
+              dls = new Estado_ac(crs.getInt(0),crs.getString(1));
+                lstD.add(dls);
+            }
+        } catch (Exception e) {
+            lstD.clear();
+            throw e;
+        }
+        return lstD;
+    }
+     
+     
+       public static ArrayList<Estado_ac> obtenerTodoslosEstado_ac() throws Exception {
+        ArrayList<Estado_ac> lst = new ArrayList<Estado_ac>();
+        try {
+            String sql = "select * from bodega.estado_ac;";
+            ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);
+            lst=llenarEstado_ac(crs);
+            crs = null;
+        } catch (SQLException exConec) {
+            throw new Exception(exConec.getMessage());
+        }
+        return lst;
+    }  
+     
+     
 }

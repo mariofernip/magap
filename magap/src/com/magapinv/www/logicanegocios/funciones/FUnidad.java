@@ -4,10 +4,14 @@
  */
 package com.magapinv.www.logicanegocios.funciones;
 
+
+
 /**
  *
  * @author User
  */
 public class FUnidad {
+    
+     
     
 }
