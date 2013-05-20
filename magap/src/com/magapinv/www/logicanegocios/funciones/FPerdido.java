@@ -8,6 +8,7 @@ import com.magapinv.www.accesodatos.AccesoDatos;
 import com.magapinv.www.accesodatos.ConjuntoResultado;
 import com.magapinv.www.accesodatos.Parametro;
 import com.magapinv.www.logicanegocios.clases.Perdido;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -36,4 +37,36 @@ public class FPerdido {
     return codigo;
     }
     
+     
+      public static ArrayList<Perdido> llenarPerdido(ConjuntoResultado crs) throws Exception {
+        ArrayList<Perdido> lstD = new ArrayList<Perdido>();
+        Perdido dls =null;
+        try {
+            while (crs.next()) {
+              dls = new Perdido(crs.getDate(0),crs.getInt(1),crs.getInt(2),crs.getString(3));              
+                lstD.add(dls);
+            }
+        } catch (Exception e) {
+            lstD.clear();
+            throw e;
+        }
+        return lstD;
+    }
+     
+     
+       public static ArrayList<Perdido> obtenerTodoslosEstado_ac() throws Exception {
+        ArrayList<Perdido> lst = new ArrayList<Perdido>();
+        try {
+            String sql = "select * from bodega.perdido;";
+            ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);
+            lst=llenarPerdido(crs);
+            crs = null;
+        } catch (SQLException exConec) {
+            throw new Exception(exConec.getMessage());
+        }
+        return lst;
+    }  
+     
+    
+     
 }
