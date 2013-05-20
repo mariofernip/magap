@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class FRol {
     
-     //INSERTA UN ROL
+     //INSERTA UN ROL DE FUNCIONARIO
     
     public static int insertarRol (Rol rol) throws Exception{
     int codigo=-1;
