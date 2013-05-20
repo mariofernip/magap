@@ -3,11 +3,11 @@
  * and open the template in the editor.
  */
 package com.magapinv.www.logicanegocios.funciones;
-import accesodatos.AccesoDatos;
-import accesodatos.ConjuntoResultado;
-import accesodatos.Parametro;
+import com.magapinv.www.accesodatos.AccesoDatos;
+import com.magapinv.www.accesodatos.ConjuntoResultado;
+import com.magapinv.www.accesodatos.Parametro;
 import java.sql.SQLException;
-import negocio_clases.Bodega;
+import com.magapinv.www.logicanegocios.clases.Bodega;
 import java.util.ArrayList;
 /**
  *
@@ -37,7 +37,7 @@ public class FBodega {
         Bodega dls =null;
         try {
             while (crs.next()) {
-              dls = new Bodega(crs.getString(0),crs.getString(1),crs.getDate(2));
+              dls = new Bodega(crs.getInt(0),crs.getString(1),crs.getDate(2));
                 lstD.add(dls);
             }
         } catch (Exception e) {

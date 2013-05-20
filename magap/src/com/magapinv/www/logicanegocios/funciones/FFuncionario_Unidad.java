@@ -3,18 +3,18 @@
  * and open the template in the editor.
  */
 package com.magapinv.www.logicanegocios.funciones;
-import accesodatos.AccesoDatos;
-import accesodatos.ConjuntoResultado;
-import accesodatos.Parametro;
+import com.magapinv.www.accesodatos.AccesoDatos;
+import com.magapinv.www.accesodatos.ConjuntoResultado;
+import com.magapinv.www.accesodatos.Parametro;
 import java.sql.SQLException;
-import negocio_clases.Funcionario_unidad;
+import com.magapinv.www.logicanegocios.clases.Funcionario_Unidad;
 import java.util.ArrayList;
 /**
  *
  * @author User
  */
 public class FFuncionario_Unidad {
-    public static int insertarfuncionario_unidad (Funcionario_unidad fun_u) throws Exception{
+    public static int insertarfuncionario_unidad (Funcionario_Unidad fun_u) throws Exception{
     int codigo=-1;
     ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
     String sql ="Select * from bodega.insert_func_unidad(?,?)";
@@ -33,12 +33,12 @@ public class FFuncionario_Unidad {
     
     return codigo;
     }
-     public static ArrayList<Funcionario_unidad> llenarfuncio_unidad(ConjuntoResultado crs) throws Exception {
-        ArrayList<Funcionario_unidad> lstD = new ArrayList<Funcionario_unidad>();
-        Funcionario_unidad dls =null;
+     public static ArrayList<Funcionario_Unidad> llenarfuncio_unidad(ConjuntoResultado crs) throws Exception {
+        ArrayList<Funcionario_Unidad> lstD = new ArrayList<Funcionario_Unidad>();
+        Funcionario_Unidad dls =null;
         try {
             while (crs.next()) {
-              dls = new Funcionario_unidad(crs.getString(0),crs.getString(1),crs.getString(2),crs.getString(3));
+              dls = new Funcionario_Unidad(crs.getString(0),crs.getString(1),crs.getString(2),crs.getString(3));
                 lstD.add(dls);
             }
         } catch (Exception e) {

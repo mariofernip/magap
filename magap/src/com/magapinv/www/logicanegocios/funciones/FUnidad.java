@@ -3,11 +3,11 @@
  * and open the template in the editor.
  */
 package com.magapinv.www.logicanegocios.funciones;
-import accesodatos.AccesoDatos;
-import accesodatos.ConjuntoResultado;
-import accesodatos.Parametro;
+import com.magapinv.www.accesodatos.AccesoDatos;
+import com.magapinv.www.accesodatos.ConjuntoResultado;
+import com.magapinv.www.accesodatos.Parametro;
 import java.sql.SQLException;
-import negocio_clases.Unidad;
+import com.magapinv.www.logicanegocios.clases.Unidad;
 import java.util.ArrayList;
 /**
  *

@@ -3,18 +3,18 @@
  * and open the template in the editor.
  */
 package com.magapinv.www.logicanegocios.funciones;
-import accesodatos.AccesoDatos;
-import accesodatos.ConjuntoResultado;
-import accesodatos.Parametro;
+import com.magapinv.www.accesodatos.AccesoDatos;
+import com.magapinv.www.accesodatos.ConjuntoResultado;
+import com.magapinv.www.accesodatos.Parametro;
 import java.sql.SQLException;
-import negocio_clases.Detalle_mov;
+import com.magapinv.www.logicanegocios.clases.Detalle_Mov;
 import java.util.ArrayList;
 /**
  *
  * @author User
  */
 public class FDetalle_Mov {
-     public static int insertardetalle_mov(Detalle_mov mov) throws Exception{
+     public static int insertardetalle_mov(Detalle_Mov mov) throws Exception{
     int codigo=-1;
     ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
     String sql ="Select * from bodega.insert_detallemov(?,?,?,?)";
@@ -33,12 +33,12 @@ public class FDetalle_Mov {
         }
         return codigo;
     }
-    public static ArrayList<Detalle_mov> llenardetalle_mov(ConjuntoResultado crs) throws Exception {
-        ArrayList<Detalle_mov> lstD = new ArrayList<Detalle_mov>();
-        Detalle_mov dls =null;
+    public static ArrayList<Detalle_Mov> llenardetalle_mov(ConjuntoResultado crs) throws Exception {
+        ArrayList<Detalle_Mov> lstD = new ArrayList<Detalle_Mov>();
+       Detalle_Mov dls =null;
         try {
             while (crs.next()) {
-              dls = new Detalle_mov(crs.getString(0),crs.getDate(1),crs.getString(2),crs.getString(3),crs.getString(4));
+              dls = new Detalle_Mov(crs.getString(0),crs.getDate(1),crs.getString(2),crs.getString(3),crs.getString(4));
                 lstD.add(dls);
             }
         } catch (Exception e) {
@@ -47,8 +47,8 @@ public class FDetalle_Mov {
         }
         return lstD;
     }
-    public static ArrayList<Detalle_mov> obtenerdetalles_mov() throws Exception {
-        ArrayList<Detalle_mov> lst = new ArrayList<Detalle_mov>();
+    public static ArrayList<Detalle_Mov> obtenerdetalles_mov() throws Exception {
+        ArrayList<Detalle_Mov> lst = new ArrayList<Detalle_Mov>();
         try {
             String sql = "select * from bodega.listar_detallemov;";
             ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);

@@ -3,18 +3,18 @@
  * and open the template in the editor.
  */
 package com.magapinv.www.logicanegocios.funciones;
-import accesodatos.AccesoDatos;
-import accesodatos.ConjuntoResultado;
-import accesodatos.Parametro;
+import com.magapinv.www.accesodatos.AccesoDatos;
+import com.magapinv.www.accesodatos.ConjuntoResultado;
+import com.magapinv.www.accesodatos.Parametro;
 import java.sql.SQLException;
-import negocio_clases.Movimiento;
+import com.magapinv.www.logicanegocios.clases.Movimientos;
 import java.util.ArrayList;
 /**
  *
  * @author User
  */
 public class FMovimientos {
-    public static int insertarmovimientos (Movimiento movi) throws Exception{
+    public static int insertarmovimientos (Movimientos movi) throws Exception{
     int codigo=-1;
     ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
     String sql ="Select * from bodega.insert_movimientos(?)";
@@ -32,12 +32,12 @@ public class FMovimientos {
     
     return codigo;
     }
-    public static ArrayList<Movimiento> llenarmovimientos(ConjuntoResultado crs) throws Exception {
-        ArrayList<Movimiento> lstD = new ArrayList<Movimiento>();
-        Movimiento dls =null;
+    public static ArrayList<Movimientos> llenarmovimientos(ConjuntoResultado crs) throws Exception {
+        ArrayList<Movimientos> lstD = new ArrayList<Movimientos>();
+        Movimientos dls =null;
         try {
             while (crs.next()) {
-              dls = new Movimiento(crs.getString(0),crs.getString(1));//tipo de dato 
+              dls = new Movimientos(crs.getString(0),crs.getString(1));//tipo de dato 
                 lstD.add(dls);
             }
         } catch (Exception e) {
@@ -46,8 +46,8 @@ public class FMovimientos {
         }
         return lstD;
     }
-    public static ArrayList<Movimiento> obtenerTodoslosmovimientos() throws Exception {
-        ArrayList<Movimiento> lst = new ArrayList<Movimiento>();
+    public static ArrayList<Movimientos> obtenerTodoslosmovimientos() throws Exception {
+        ArrayList<Movimientos> lst = new ArrayList<Movimientos>();
         try {
             String sql = "select * from bodega.listar_movimientos;";
             ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);

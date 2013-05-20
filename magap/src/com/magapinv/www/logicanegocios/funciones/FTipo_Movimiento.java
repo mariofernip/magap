@@ -3,18 +3,18 @@
  * and open the template in the editor.
  */
 package com.magapinv.www.logicanegocios.funciones;
-import accesodatos.AccesoDatos;
-import accesodatos.ConjuntoResultado;
-import accesodatos.Parametro;
+import com.magapinv.www.accesodatos.AccesoDatos;
+import com.magapinv.www.accesodatos.ConjuntoResultado;
+import com.magapinv.www.accesodatos.Parametro;
 import java.sql.SQLException;
-import negocio_clases.Tipo_movimiento;
+import com.magapinv.www.logicanegocios.clases.Tipo_Movimiento;
 import java.util.ArrayList;
 /**
  *
  * @author User
  */
 public class FTipo_Movimiento {
-    public static int insertartipo_mov (Tipo_movimiento t_movi) throws Exception{
+    public static int insertartipo_mov (Tipo_Movimiento t_movi) throws Exception{
     int codigo=-1;
     ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
     String sql ="Select * from bodega.insert_tipo_mov(?)";
@@ -32,12 +32,12 @@ public class FTipo_Movimiento {
     
     return codigo;
     }
-    public static ArrayList<Tipo_movimiento> llenartip_movimientos(ConjuntoResultado crs) throws Exception {
-        ArrayList<Tipo_movimiento> lstD = new ArrayList<Tipo_movimiento>();
-        Tipo_movimiento dls =null;
+    public static ArrayList<Tipo_Movimiento> llenartip_movimientos(ConjuntoResultado crs) throws Exception {
+        ArrayList<Tipo_Movimiento> lstD = new ArrayList<Tipo_Movimiento>();
+        Tipo_Movimiento dls =null;
         try {
             while (crs.next()) {
-              dls = new Tipo_movimiento(crs.getString(0),crs.getString(1));//tipo de dato 
+              dls = new Tipo_Movimiento(crs.getString(0),crs.getString(1));//tipo de dato 
                 lstD.add(dls);
             }
         } catch (Exception e) {
@@ -46,8 +46,8 @@ public class FTipo_Movimiento {
         }
         return lstD;
     }
-    public static ArrayList<Tipo_movimiento> obtenerTodoslostip_movimientos() throws Exception {
-        ArrayList<Tipo_movimiento> lst = new ArrayList<Tipo_movimiento>();
+    public static ArrayList<Tipo_Movimiento> obtenerTodoslostip_movimientos() throws Exception {
+        ArrayList<Tipo_Movimiento> lst = new ArrayList<Tipo_Movimiento>();
         try {
             String sql = "select * from bodega.listar_tipo_mov;";
             ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);
