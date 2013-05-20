@@ -15,6 +15,14 @@ public class Funcionario {
     private String numerostelefonicos;
     private String correo;
 
+    public Funcionario(String cedula, String nombres, String apellidos, String numerostelefonicos, String correo) {
+        this.cedula = cedula;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.numerostelefonicos = numerostelefonicos;
+        this.correo = correo;
+    }
+
     public String getCedula() {
         return cedula;
     }
@@ -29,6 +37,14 @@ public class Funcionario {
 
     public void setNombres(String nombres) {
         this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
     public String getNumerostelefonicos() {
@@ -47,31 +63,7 @@ public class Funcionario {
         this.correo = correo;
     }
 
-    public Funcionario() {
-    }
 
-    
-    public Funcionario(String cedula, String nombres, String numerostelefonicos, String correo) {
-        this.cedula = cedula;
-        this.nombres = nombres;
-        this.numerostelefonicos = numerostelefonicos;
-        this.correo = correo;
-    }
-
-    /**
-     * @return the apellidos
-     */
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    /**
-     * @param apellidos the apellidos to set
-     */
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-    
     
     }
     
