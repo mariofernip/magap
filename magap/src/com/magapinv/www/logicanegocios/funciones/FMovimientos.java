@@ -37,7 +37,7 @@ public class FMovimientos {
         Movimientos dls =null;
         try {
             while (crs.next()) {
-              dls = new Movimientos(crs.getString(0),crs.getString(1));//tipo de dato 
+              dls = new Movimientos(crs.getInt(0),crs.getString(1),crs.getString(2));//tipo de dato 
                 lstD.add(dls);
             }
         } catch (Exception e) {

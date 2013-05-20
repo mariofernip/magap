@@ -38,7 +38,7 @@ public class FFuncionario_Unidad {
         Funcionario_Unidad dls =null;
         try {
             while (crs.next()) {
-              dls = new Funcionario_Unidad(crs.getString(0),crs.getString(1),crs.getString(2),crs.getString(3));
+              dls = new Funcionario_Unidad(crs.getString(0),crs.getInt(1));
                 lstD.add(dls);
             }
         } catch (Exception e) {
@@ -47,8 +47,8 @@ public class FFuncionario_Unidad {
         }
         return lstD;
     }
-    public static ArrayList<Funcionario_unidad> obtenerTodos_funcionarios() throws Exception {
-        ArrayList<Funcionario_unidad> lst = new ArrayList<Funcionario_unidad>();
+    public static ArrayList<Funcionario_Unidad> obtenerTodos_funcionarios() throws Exception {
+        ArrayList<Funcionario_Unidad> lst = new ArrayList<Funcionario_Unidad>();
         try {
             String sql = "select * from bodega.listar_func_unidad;";
             ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);

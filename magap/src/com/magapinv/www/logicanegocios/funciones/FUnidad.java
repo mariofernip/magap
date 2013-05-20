@@ -39,7 +39,7 @@ public class FUnidad {
         Unidad dls =null;
         try {
             while (crs.next()) {
-              dls = new Unidad(crs.getString(0),crs.getString(1),crs.getString(2),crs.getString(3));//tipo de dato 
+              dls = new Unidad(crs.getInt(0),crs.getString(1),crs.getString(2),crs.getString(3));//tipo de dato 
                 lstD.add(dls);
             }
         } catch (Exception e) {
