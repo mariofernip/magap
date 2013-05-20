@@ -8,6 +8,7 @@ import com.magapinv.www.accesodatos.AccesoDatos;
 import com.magapinv.www.accesodatos.ConjuntoResultado;
 import com.magapinv.www.accesodatos.Parametro;
 import com.magapinv.www.logicanegocios.clases.Mantenimiento;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -37,6 +38,36 @@ public class FMantenimiento {
     
     return codigo;
     }
+    
+     public static ArrayList<Mantenimiento> llenarMantenimiento(ConjuntoResultado crs) throws Exception {
+        ArrayList<Mantenimiento> lstD = new ArrayList<Mantenimiento>();
+        Mantenimiento dls =null;
+        try {
+            while (crs.next()) {
+              dls = new Mantenimiento(crs.getString(0),crs.getDate(1),crs.getDate(2),crs.getString(3),crs.getInt(4), crs.getInt(5),crs.getString(6));              
+              lstD.add(dls);
+            }
+        } catch (Exception e) {
+            lstD.clear();
+            throw e;
+        }
+        return lstD;
+    }
+     
+     
+       public static ArrayList<Mantenimiento> obtenerTodoslosEstado_ac() throws Exception {
+        ArrayList<Mantenimiento> lst = new ArrayList<Mantenimiento>();
+        try {
+            String sql = "select * from bodega.mantenimiento;";
+            ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);
+            lst=llenarMantenimiento(crs);
+            crs = null;
+        } catch (SQLException exConec) {
+            throw new Exception(exConec.getMessage());
+        }
+        return lst;
+    }  
+     
     
     
 }
