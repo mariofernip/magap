@@ -11,18 +11,10 @@ package com.magapinv.www.logicanegocios.clases;
 public class Funcionario_Unidad {
     private String cedula_funcionario;
     private int Id_unidad;
-    //private String observacion;
-    //private String id_tipo_mov;
 
-    public Funcionario_Unidad() {
-    }
-
-    
-    public Funcionario_Unidad(String cedula_funcionario, int Id_unidad/*, String observacion, String id_tipo_mov*/) {
+    public Funcionario_Unidad(String cedula_funcionario, int Id_unidad) {
         this.cedula_funcionario = cedula_funcionario;
         this.Id_unidad = Id_unidad;
-     //   this.observacion = observacion;
-       // this.id_tipo_mov = id_tipo_mov;
     }
 
     public String getCedula_funcionario() {
@@ -40,21 +32,7 @@ public class Funcionario_Unidad {
     public void setId_unidad(int Id_unidad) {
         this.Id_unidad = Id_unidad;
     }
-/*
-    public String getObservacion() {
-        return observacion;
-    }
+   
 
-    public void setObservacion(String observacion) {
-        this.observacion = observacion;
-    }
-
-    public String getId_tipo_mov() {
-        return id_tipo_mov;
-    }
-
-    public void setId_tipo_mov(String id_tipo_mov) {
-        this.id_tipo_mov = id_tipo_mov;
-    }
-  */  
+    
 }
