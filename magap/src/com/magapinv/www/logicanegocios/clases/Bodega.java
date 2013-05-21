@@ -15,6 +15,9 @@ public class Bodega {
     private String ubicacion;
     private Date fecha_creacion;
 
+    public Bodega() {
+    }
+      
     public Bodega(int id_bodega, String ubicacion, Date fecha_creacion) {
         this.id_bodega = id_bodega;
         this.ubicacion = ubicacion;
