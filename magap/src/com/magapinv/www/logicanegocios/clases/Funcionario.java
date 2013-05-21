@@ -15,6 +15,9 @@ public class Funcionario {
     private String numerostelefonicos;
     private String correo;
 
+    public Funcionario() {
+    }
+   
     public Funcionario(String cedula, String nombres, String apellidos, String numerostelefonicos, String correo) {
         this.cedula = cedula;
         this.nombres = nombres;
