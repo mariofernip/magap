@@ -59,5 +59,18 @@ public class FBodega {
         return lst;
     }
     
-    
+     public static Bodega obtenerBodega_xcodigo(int codigob) throws Exception {
+            Bodega fun = new Bodega();
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,codigob));        
+            try {
+                String sql = "Select * from bodega.f_obtener_bodega_xcodigo(?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                fun=llenarbodega(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return fun;
+    }
 }
