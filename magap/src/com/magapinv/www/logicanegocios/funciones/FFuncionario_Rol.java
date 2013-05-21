@@ -44,7 +44,7 @@ public class FFuncionario_Rol {
         Funcionario_Rol dls =null;
         try {
             while (crs.next()) {
-              dls = new Funcionario_Rol(FFuncionario.obtenerFuncionarios_xcodigo((crs.getInt(0))),FRol.obtenerRoles_xcodigo((crs.getInt(1))),crs.getDate(2),crs.getDate(3));
+              dls = new Funcionario_Rol(FFuncionario.obtenerFuncionarios_xcodigo((crs.getString(0))),FRol.obtenerRoles_xcodigo((crs.getInt(1))),crs.getDate(2),crs.getDate(3));
                 lstD.add(dls);
             }
         } catch (Exception e) {
