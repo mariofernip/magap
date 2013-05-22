@@ -67,6 +67,8 @@ public class FFuncionario_Rol_Bodega {
         }
         return lst;
     }  
-    
+ 
+       
+       
     
 }
