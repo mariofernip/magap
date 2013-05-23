@@ -47,7 +47,7 @@ public class FInventario {
         Inventario dls =null;
         try {
             while (crs.next()) {
-              dls = new Inventario(crs.getInt(0),crs.getString(1),crs.getString(2),crs.getDate(3),crs.getString(4),FEstado_ac.obtenerEstado_ac_xcodigo(crs.getInt(5)),FCategoria.obtenerCategoria_xcodigo(crs.getInt(6)),FBodega.obtenerBodega_xcodigo(crs.getInt(7)));
+     dls = new Inventario(crs.getInt(0),crs.getString(1),crs.getString(2),crs.getDate(3),crs.getString(4),FEstado_ac.obtenerEstado_ac_xcodigo(crs.getInt(5)),FCategoria.obtenerCategoria_xcodigo(crs.getInt(6)),FBodega.obtenerBodega_xcodigo(crs.getInt(7)));
               lstD.add(dls);
             }
         } catch (Exception e) {
