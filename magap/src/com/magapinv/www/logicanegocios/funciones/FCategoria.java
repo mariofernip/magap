@@ -60,4 +60,19 @@ public class FCategoria {
         }
         return lst;
     }
+    //obtenerCategoria_xcodigo recibe el nombre devuelve el codigo
+    public static Categoria obtenerCategoria_xcodigo(int id) throws Exception {
+            Categoria cat = new Categoria(null, null);
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,id));        
+            try {
+                String sql = "Select * from bodega.sel_cat_nombre(?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                cat=llenarcategoria(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return cat;
+    }
 }
