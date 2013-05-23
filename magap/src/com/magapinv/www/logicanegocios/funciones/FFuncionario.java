@@ -76,5 +76,20 @@ public class FFuncionario {
               }
         return fun;
     }
-    
+     public static Funcionario obtenerFuncionario_xcodigo(String cedula) throws Exception {
+            Funcionario fun = new Funcionario();
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,cedula)); 
+                      try {
+                String sql = "Select * from bodega.sel_fun_cedula(?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                fun=llenarfuncionarios(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return fun;
+    }
 }
+    
+
