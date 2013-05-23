@@ -32,7 +32,6 @@ public class Funcionario_Unidad {
     public void setId_unidad(int Id_unidad) {
         this.Id_unidad = Id_unidad;
     }
-   
 
     
 }
