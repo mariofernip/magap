@@ -61,10 +61,10 @@ public class FCategoria {
         return lst;
     }
     //obtenerCategoria_xcodigo recibe el nombre devuelve el codigo
-    public static Categoria obtenerCategoria_xcodigo(int id) throws Exception {
+    public static Categoria obtenerCategoria_xcodigo(String n_cat) throws Exception {
             Categoria cat = new Categoria(null, null);
             ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
-            lstpar.add(new Parametro(1,id));        
+            lstpar.add(new Parametro(1,n_cat));        
             try {
                 String sql = "Select * from bodega.sel_cat_nombre(?)";
                 ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);

@@ -59,10 +59,10 @@ public class FBodega {
         return lst;
     }
     
-     public static Bodega obtenerBodega_xcodigo(int codigob) throws Exception {
+     public static Bodega obtenerBodega_xcodigo(String ubi) throws Exception {
             Bodega fun = new Bodega();
             ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
-            lstpar.add(new Parametro(1,codigob));        
+            lstpar.add(new Parametro(1,ubi));        
             try {
                 String sql = "Select * from bodega.sel_bod_ubicacion(?)";
                 ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);

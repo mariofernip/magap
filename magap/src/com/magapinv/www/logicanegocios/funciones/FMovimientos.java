@@ -58,10 +58,10 @@ public class FMovimientos {
         }
         return lst;
     }
-     public static Movimientos obtenerMovimiento_xcodigo(int id) throws Exception {
+     public static Movimientos obtenerMovimiento_xcodigo(String obs) throws Exception {
             Movimientos man = new Movimientos(0, null, null);
             ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
-            lstpar.add(new Parametro(1,id)); 
+            lstpar.add(new Parametro(1,obs)); 
                       try {
                 String sql = "Select * from bodega.sel_movimientos_observacion(?)";
                 ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);

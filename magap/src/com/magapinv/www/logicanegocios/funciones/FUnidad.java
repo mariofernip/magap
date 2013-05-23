@@ -48,7 +48,7 @@ public class FUnidad {
         }
         return lstD;
     }
-    public static ArrayList<Unidad> obtenerTodoslostip_movimientos() throws Exception {
+    public static ArrayList<Unidad> obtenerTodoaslas_unidades() throws Exception {
         ArrayList<Unidad> lst = new ArrayList<Unidad>();
         try {
             String sql = "select * from bodega.listar_unidad;";
@@ -60,4 +60,19 @@ public class FUnidad {
         }
         return lst;
     }
+    public static Unidad obtenerMovimiento_xcodigo(String nom) throws Exception {
+            Unidad uni = new Unidad(0, null, null, null);
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,nom)); 
+                      try {
+                String sql = "Select * from bodega.sel_unidad_nombr(?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                uni=llenarunidades(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return uni;
+    }
 }
+

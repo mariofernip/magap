@@ -60,10 +60,10 @@ public class FFuncionario_Unidad {
         return lst;
     }
     
-     public static Funcionario_Unidad obtenerFuncionario_xcodigo(int id) throws Exception {
+     public static Funcionario_Unidad obtenerFuncionario_xcodigo(String cedula) throws Exception {
             Funcionario_Unidad fun_u = new Funcionario_Unidad(null,0);
             ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
-            lstpar.add(new Parametro(1,id)); 
+            lstpar.add(new Parametro(1,cedula)); 
                       try {
                 String sql = "Select * from bodega.sel_funcio_unidad_ced(?)";
                 ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);

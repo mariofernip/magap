@@ -49,7 +49,7 @@ public class FTipo_Movimiento {
     public static ArrayList<Tipo_Movimiento> obtenerTodoslostip_movimientos() throws Exception {
         ArrayList<Tipo_Movimiento> lst = new ArrayList<Tipo_Movimiento>();
         try {
-            String sql = "select * from bodega.listar_tipo_mov;";
+            String sql = "select * from bodega.listar_tipo_mov();";
             ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);
             lst=llenartip_movimientos(crs);
             crs = null;
@@ -58,4 +58,19 @@ public class FTipo_Movimiento {
         }
         return lst;
     }
+    public static Tipo_Movimiento obtenert_movimiento_xcodigo(String desc) throws Exception {
+            Tipo_Movimiento t_mov = new Tipo_Movimiento(0,null);
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,desc));        
+            try {
+                String sql = "Select * from bodega.sel_timovimiento_tipo?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                t_mov=llenartip_movimientos(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return t_mov;
+    }
 }
+
