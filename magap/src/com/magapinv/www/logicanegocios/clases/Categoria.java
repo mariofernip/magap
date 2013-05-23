@@ -11,11 +11,12 @@ package com.magapinv.www.logicanegocios.clases;
 public class Categoria {
     private String id_categoria;
     private String nombre_categoria;
-
-    public Categoria(String id_categoria, String nombre_categoria) {
+    
+public Categoria(String id_categoria, String nombre_categoria) {
         this.id_categoria = id_categoria;
         this.nombre_categoria = nombre_categoria;
     }
+   
 
     public String getId_categoria() {
         return id_categoria;
@@ -34,6 +35,7 @@ public class Categoria {
     }
 
     
+
 
     
 }
