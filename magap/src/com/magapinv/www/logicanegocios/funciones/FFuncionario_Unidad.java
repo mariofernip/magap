@@ -59,4 +59,20 @@ public class FFuncionario_Unidad {
         }
         return lst;
     }
+    
+     public static Funcionario_Unidad obtenerFuncionario_xcodigo(int id) throws Exception {
+            Funcionario_Unidad fun_u = new Funcionario_Unidad(null,0);
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,id)); 
+                      try {
+                String sql = "Select * from bodega.sel_funcio_unidad_ced(?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                fun_u=llenarfuncio_unidad(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return fun_u;
+    }
 }
+

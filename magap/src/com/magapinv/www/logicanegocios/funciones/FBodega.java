@@ -64,7 +64,7 @@ public class FBodega {
             ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
             lstpar.add(new Parametro(1,codigob));        
             try {
-                String sql = "Select * from bodega.f_obtener_bodega_xcodigo(?)";
+                String sql = "Select * from bodega.sel_bod_ubicacion(?)";
                 ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
                 fun=llenarbodega(crs).get(0);
                 crs = null;

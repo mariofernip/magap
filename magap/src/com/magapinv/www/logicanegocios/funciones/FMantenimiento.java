@@ -68,6 +68,19 @@ public class FMantenimiento {
         return lst;
     }  
      
-    
+    public static Mantenimiento obtenerMantenimiento_xcodigo(int id) throws Exception {
+            Mantenimiento man = new Mantenimiento(null, null, null, null, 0, 0, null);
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,id)); 
+                      try {
+                String sql = "Select * from bodega.sel_movimientos_observacion(?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                man=llenarMantenimiento(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return man;
+    }
     
 }

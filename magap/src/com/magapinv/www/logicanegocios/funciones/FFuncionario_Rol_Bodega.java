@@ -43,7 +43,7 @@ public class FFuncionario_Rol_Bodega {
         Funcionario_Rol_Bodega dls =null;
         try {
             while (crs.next()) {
-              dls = new Funcionario_Rol_Bodega(FFuncionario.obtenerFuncionarios_xcodigo(crs.getString(0)),FBodega.obtenerBodega_xcodigo(crs.getInt(1)),crs.getDate(2),crs.getDate(3));
+              dls = new Funcionario_Rol_Bodega(FFuncionario.obtenerFuncionario_xcodigo(crs.getString(0)),FBodega.obtenerBodega_xcodigo(crs.getInt(1)),crs.getDate(2),crs.getDate(3));
               // Funcionario numero_cedula, Bodega id_bodega, Date fecha_ingreso, Date fecha_salida
               lstD.add(dls);
             }
