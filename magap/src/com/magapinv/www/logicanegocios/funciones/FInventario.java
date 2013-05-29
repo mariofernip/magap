@@ -28,7 +28,8 @@ public class FInventario {
     lstpar.add(new Parametro(5,inv.getDescripcion()));
     lstpar.add(new Parametro(6,inv.getId_estado()));
     lstpar.add(new Parametro(7,inv.getId_categoria()));
-    lstpar.add(new Parametro(8,inv.getId_bodega()));  
+    lstpar.add(new Parametro(8,inv.getId_bodega())); 
+    lstpar.add(new Parametro(9,inv.getStock()));
         try {
             ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
             //band=AccesoDatos.ejecutaComando(sql, lstpar);
@@ -47,7 +48,7 @@ public class FInventario {
         Inventario dls =null;
         try {
             while (crs.next()) {
-     dls = new Inventario(crs.getInt(0),crs.getString(1),crs.getString(2),crs.getDate(3),crs.getString(4),FEstado_ac.obtenerEstado_ac_xcodigo(crs.getInt(5)),FCategoria.obtenerCategoria_xcodigo(crs.getInt(6)),FBodega.obtenerBodega_xcodigo(crs.getInt(7)));
+     dls = new Inventario(crs.getInt(0),crs.getString(1),crs.getString(2),crs.getString(3),crs.getString(4),FEstado_ac.obtenerEstado_ac_xcodigo(crs.getInt(5)),FCategoria.obtenerCategoria_xcodigo(crs.getString(6)),FBodega.obtenerBodega_xcodigo(crs.getString(7)), crs.getInt(8));
               lstD.add(dls);
             }
         } catch (Exception e) {
