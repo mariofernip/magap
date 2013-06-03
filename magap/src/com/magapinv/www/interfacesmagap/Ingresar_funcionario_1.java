@@ -13,19 +13,16 @@ import com.magapinv.www.logicanegocios.funciones.FFuncionario;
 import com.magapinv.www.logicanegocios.funciones.FInventario;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import sun.awt.FocusingTextField;
 /**
  *
  * @author Cpadron
  */
-public class Ingresar_funcionario extends javax.swing.JFrame {
+public class Ingresar_funcionario_1 extends javax.swing.JFrame {
 
     /**
      * Creates new form Ingresar_funcionario
      */
-    public Ingresar_funcionario() {
+    public Ingresar_funcionario_1() {
         initComponents();
     }
 
@@ -94,11 +91,6 @@ public class Ingresar_funcionario extends javax.swing.JFrame {
         });
 
         btncancelar.setText("Cancelar");
-        btncancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncancelarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -174,15 +166,15 @@ public class Ingresar_funcionario extends javax.swing.JFrame {
       FFuncionario.insertarfuncionario(fun);
            
         } catch (Exception ex) {
-            Logger.getLogger(Ingresar_funcionario.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Ingresar_funcionario_1.class.getName()).log(Level.SEVERE, null, ex);
         }
-         JOptionPane.showInputDialog(this,"Datos ingresados correctamente");
+        
              
     }//GEN-LAST:event_btnaceptarActionPerformed
 
     private void txtcedulaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtcedulaFocusLost
         // TODO add your handling code here:
-  if(txtcedula.getText().trim().length()==0)
+  if(txtcedula.getText().trim().isEmpty())
  {
        txtcedula.setText("Este  valor no puede estar vacio");
  }
@@ -194,7 +186,7 @@ public class Ingresar_funcionario extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(txtnombres.getText().trim().length()==0)
  {
-       txtcedula.setText("Este  valor no puede estar vacio");
+       txtnombres.setText("Este  valor no puede estar vacio");
  }
     }//GEN-LAST:event_txtnombresFocusLost
 
@@ -205,16 +197,6 @@ public class Ingresar_funcionario extends javax.swing.JFrame {
        txtapellidos.setText("Este  valor no puede estar vacio");
  }
     }//GEN-LAST:event_txtapellidosFocusLost
-
-    private void btncancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelarActionPerformed
-        // TODO add your handling code here:
-        txtcedula.setText("");
-        txtapellidos.setText("");
-        txtmail.setText("");
-        txttelefonos.setText("");
-        txtnombres.setText("");
-        txtcedula.grabFocus();
-    }//GEN-LAST:event_btncancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,20 +215,20 @@ public class Ingresar_funcionario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Ingresar_funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ingresar_funcionario_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Ingresar_funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ingresar_funcionario_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Ingresar_funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ingresar_funcionario_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Ingresar_funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ingresar_funcionario_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Ingresar_funcionario().setVisible(true);
+                new Ingresar_funcionario_1().setVisible(true);
             }
         });
     }
