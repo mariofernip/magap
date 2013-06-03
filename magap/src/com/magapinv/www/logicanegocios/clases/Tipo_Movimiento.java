@@ -12,10 +12,7 @@ public class Tipo_Movimiento {
     private int id_tipo_movimiento;
     private String tipomovimiento;
 
-    public Tipo_Movimiento() {
-    }
-
-    public Tipo_Movimiento(int id_tipo_movimiento, String tipomovimiento) {
+        public Tipo_Movimiento(int id_tipo_movimiento, String tipomovimiento) {
         this.id_tipo_movimiento = id_tipo_movimiento;
         this.tipomovimiento = tipomovimiento;
     }
