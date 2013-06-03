@@ -14,9 +14,7 @@ public class Unidad {
     private String ubicacion_unidad;
     private String funcion_unidad;
 
-    public Unidad() {
-    }
-
+   
     public Unidad(int id_unidad, String nombre_unidad, String ubicacion_unidad, String funcion_unidad) {
         this.id_unidad = id_unidad;
         this.nombre_unidad = nombre_unidad;
