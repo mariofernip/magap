@@ -116,7 +116,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
             }
         });
 
-        FechaBodega.setDateFormatString("yyyy-MM--dd");
+        FechaBodega.setDateFormatString("yyyy-MM-dd");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -354,15 +354,14 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(87, 87, 87)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel12)
                         .addGap(75, 75, 75))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)))
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtnombreUnidad)
                     .addComponent(txtubicacionUnidad)
@@ -534,21 +533,32 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
     }//GEN-LAST:event_btnnombreCategoriaActionPerformed
 
     private void BotonGuardarBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarBodegaActionPerformed
-       
-        //JOptionPane.showMessageDialog(null, "Elemento Bodega Guardado exitosamente");
-//        String fechaBodega = new SimpleDateFormat("yyyy/MM/dd").format(FechaBodega.getDate());
-//        DateFormat formato;
-//        Date date;
-//        formato = new SimpleDateFormat("yyyy/MM/dd");
-        try {       
-//            date = (Date)formato.parse(fechaBodega);
-            Bodega funu = new Bodega(txtUbicacionBodega.getText(),FechaBodega.getDate());
-            FBodega.insertarbodega(funu);
-        } //catch (ParseException ex) {
-//            Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-         catch (Exception ex) {
-            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+        
+        
+
+        try {                                                   
+           Bodega bod = new Bodega();
+          
+            
+            String fechaBodega = new SimpleDateFormat("yyyy-MM-dd").format(FechaBodega.getDate());
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            Date dateStr = formatter.parse(fechaBodega);
+           
+            java.sql.Date sqlDate = new java.sql.Date(dateStr.getTime());
+          
+            
+
+            try {       
+                Bodega funu = new Bodega(txtUbicacionBodega.getText(),sqlDate);
+                FBodega.insertarbodega(funu);
+                JOptionPane.showMessageDialog(null, "Elemento Bodega Guardado exitosamente");
+            } 
+             catch (Exception ex) {
+                Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } 
+         catch (ParseException ex) {
+            Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_BotonGuardarBodegaActionPerformed
 
