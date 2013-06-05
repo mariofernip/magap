@@ -69,7 +69,7 @@ public class FMantenimiento {
     }  
      
     public static Mantenimiento obtenerMantenimiento_xcodigo(int id) throws Exception {
-            Mantenimiento man = new Mantenimiento(null, null, null, null, 0, 0, null);
+            Mantenimiento man = new Mantenimiento();
             ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
             lstpar.add(new Parametro(1,id)); 
                       try {
