@@ -19,8 +19,8 @@ public class FUnidad {
     ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
     String sql ="Select * from bodega.insert_unidad(?,?,?)";
     lstpar.add(new Parametro(1,uni.getUbicacion_unidad()));
-    lstpar.add(new Parametro(1,uni.getNombre_unidad()));
-    lstpar.add(new Parametro(1,uni.getFuncion_unidad()));
+    lstpar.add(new Parametro(2,uni.getNombre_unidad()));
+    lstpar.add(new Parametro(3,uni.getFuncion_unidad()));
      
         try {
             ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
