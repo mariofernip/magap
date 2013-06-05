@@ -67,7 +67,7 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="222" max="32767" attributes="0"/>
+              <EmptySpace pref="218" max="32767" attributes="0"/>
               <Component id="jTabbedPane1" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
           </Group>
@@ -122,12 +122,12 @@
                                   <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="BotonGuardarBodega" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtUbicacionBodega" min="-2" pref="247" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="765" max="32767" attributes="0"/>
+                              <EmptySpace pref="915" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -143,7 +143,7 @@
                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                               <Component id="BotonGuardarBodega" min="-2" pref="23" max="-2" attributes="0"/>
-                              <EmptySpace pref="205" max="32767" attributes="0"/>
+                              <EmptySpace pref="209" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -225,7 +225,7 @@
                                   <Component id="btnnombreCategoria" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="715" max="32767" attributes="0"/>
+                          <EmptySpace pref="877" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -239,7 +239,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                           <Component id="btnnombreCategoria" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="217" max="32767" attributes="0"/>
+                          <EmptySpace pref="221" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -312,7 +312,7 @@
                                   <Component id="btnguadarFuncionario" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="729" max="32767" attributes="0"/>
+                          <EmptySpace pref="891" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -344,7 +344,7 @@
                               <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtemailFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="79" max="32767" attributes="0"/>
+                          <EmptySpace pref="83" max="32767" attributes="0"/>
                           <Component id="btnguadarFuncionario" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                       </Group>
@@ -441,7 +441,7 @@
                                   <Component id="btnguardarRol" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="820" max="32767" attributes="0"/>
+                          <EmptySpace pref="982" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -455,7 +455,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                           <Component id="btnguardarRol" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="232" max="32767" attributes="0"/>
+                          <EmptySpace pref="236" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -515,7 +515,7 @@
                                       <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="434" max="32767" attributes="0"/>
+                                  <EmptySpace pref="596" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -554,7 +554,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                           <Component id="btnguardarUnidad" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="114" max="32767" attributes="0"/>
+                          <EmptySpace pref="118" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -632,7 +632,7 @@
                                   <Component id="btnGuardarEstado_ac" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="808" max="32767" attributes="0"/>
+                          <EmptySpace pref="970" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -646,7 +646,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                           <Component id="btnGuardarEstado_ac" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="232" max="32767" attributes="0"/>
+                          <EmptySpace pref="236" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -722,7 +722,7 @@
                                       <Component id="txttipomov" min="-2" pref="94" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="754" max="32767" attributes="0"/>
+                              <EmptySpace pref="916" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -734,7 +734,7 @@
                                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txttipomov" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="169" max="32767" attributes="0"/>
+                              <EmptySpace pref="173" max="32767" attributes="0"/>
                               <Component id="btnguardar" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                           </Group>
@@ -805,7 +805,7 @@
                                   <Component id="btngunidad" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="740" max="32767" attributes="0"/>
+                          <EmptySpace pref="902" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -824,7 +824,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                           <Component id="btngunidad" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="137" max="32767" attributes="0"/>
+                          <EmptySpace pref="141" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -851,6 +851,99 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btngunidadActionPerformed"/>
                   </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JTabbedPane" name="jTabbedPane12">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Movimiento">
+                <Property name="tabTitle" type="java.lang.String" value="Movimiento"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel9">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Ingreso de movimientos">
+                    <Property name="tabTitle" type="java.lang.String" value="Ingreso de movimientos"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="261" max="-2" attributes="0"/>
+                                  <Component id="guarmovimiento" min="-2" pref="110" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jLabel18" max="32767" attributes="0"/>
+                                      <Component id="jLabel19" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txttipomov1" pref="171" max="32767" attributes="0"/>
+                                      <Component id="txtdescmovi" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="879" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtdescmovi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txttipomov1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="81" max="32767" attributes="0"/>
+                          <Component id="guarmovimiento" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel18">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ingrese la descripcion del movimiento"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txtdescmovi">
+                </Component>
+                <Component class="javax.swing.JButton" name="guarmovimiento">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Guardar"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="guarmovimientoActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txttipomov1">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel19">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ingrese el tipo de movimiento"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>

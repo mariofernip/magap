@@ -97,6 +97,13 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         btngunidad = new javax.swing.JButton();
+        jTabbedPane12 = new javax.swing.JTabbedPane();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        txtdescmovi = new javax.swing.JTextField();
+        guarmovimiento = new javax.swing.JButton();
+        txttipomov1 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -129,11 +136,11 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
-                .addGap(68, 68, 68)
+                .addGap(80, 80, 80)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BotonGuardarBodega)
                     .addComponent(txtUbicacionBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(765, Short.MAX_VALUE))
+                .addContainerGap(915, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,7 +153,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(48, 48, 48)
                 .addComponent(BotonGuardarBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(205, Short.MAX_VALUE))
+                .addContainerGap(209, Short.MAX_VALUE))
         );
 
         jTabbedPane8.addTab("Datos Bodega", jPanel3);
@@ -181,7 +188,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(286, 286, 286)
                         .addComponent(btnnombreCategoria)))
-                .addContainerGap(715, Short.MAX_VALUE))
+                .addContainerGap(877, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,7 +199,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                     .addComponent(txtnombreCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(76, 76, 76)
                 .addComponent(btnnombreCategoria)
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addContainerGap(221, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Ingresar Nueva Categoria", jPanel6);
@@ -252,7 +259,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(275, 275, 275)
                         .addComponent(btnguadarFuncionario)))
-                .addContainerGap(729, Short.MAX_VALUE))
+                .addContainerGap(891, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,7 +284,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(txtemailFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addComponent(btnguadarFuncionario)
                 .addGap(53, 53, 53))
         );
@@ -309,7 +316,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(280, 280, 280)
                         .addComponent(btnguardarRol)))
-                .addContainerGap(820, Short.MAX_VALUE))
+                .addContainerGap(982, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -320,7 +327,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                     .addComponent(txtnombreRol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(77, 77, 77)
                 .addComponent(btnguardarRol)
-                .addContainerGap(232, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
 
         jTabbedPane5.addTab("Ingresar Nuevo Rol", jPanel5);
@@ -360,7 +367,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
                             .addComponent(jLabel14))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 434, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 596, Short.MAX_VALUE)))
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtnombreUnidad)
                     .addComponent(txtubicacionUnidad)
@@ -389,7 +396,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                     .addComponent(jLabel14))
                 .addGap(69, 69, 69)
                 .addComponent(btnguardarUnidad)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         jTabbedPane6.addTab("Ingresar Nueva Unidad", jPanel7);
@@ -419,7 +426,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(279, 279, 279)
                         .addComponent(btnGuardarEstado_ac)))
-                .addContainerGap(808, Short.MAX_VALUE))
+                .addContainerGap(970, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -430,7 +437,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                     .addComponent(txtEstado_ac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(67, 67, 67)
                 .addComponent(btnGuardarEstado_ac)
-                .addContainerGap(232, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
 
         jTabbedPane7.addTab("Ingresar Nuevo Estado de Inventario", jPanel8);
@@ -460,7 +467,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(98, 98, 98)
                         .addComponent(txttipomov, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(754, Short.MAX_VALUE))
+                .addContainerGap(916, Short.MAX_VALUE))
         );
         jPing_tip_moviLayout.setVerticalGroup(
             jPing_tip_moviLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -469,7 +476,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                 .addGroup(jPing_tip_moviLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txttipomov, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 169, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
                 .addComponent(btnguardar)
                 .addGap(102, 102, 102))
         );
@@ -518,7 +525,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(332, 332, 332)
                         .addComponent(btngunidad, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(740, Short.MAX_VALUE))
+                .addContainerGap(902, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -533,12 +540,63 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
                     .addComponent(txtnomuni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(108, 108, 108)
                 .addComponent(btngunidad)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         jTabbedPane11.addTab("Asignar un funcionario a una unidad", jPanel2);
 
         jTabbedPane1.addTab("Funcionario Unidad", jTabbedPane11);
+
+        jLabel18.setText("Ingrese la descripcion del movimiento");
+
+        guarmovimiento.setText("Guardar");
+        guarmovimiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guarmovimientoActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setText("Ingrese el tipo de movimiento");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(261, 261, 261)
+                        .addComponent(guarmovimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(70, 70, 70)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txttipomov1, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                            .addComponent(txtdescmovi))))
+                .addContainerGap(879, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(txtdescmovi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(txttipomov1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addComponent(guarmovimiento)
+                .addGap(128, 128, 128))
+        );
+
+        jTabbedPane12.addTab("Ingreso de movimientos", jPanel9);
+
+        jTabbedPane1.addTab("Movimiento", jTabbedPane12);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/magapinv/www/interfacesmagap/recursos/logo_magap.png"))); // NOI18N
 
@@ -567,7 +625,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(83, 83, 83)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 218, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(67, 67, 67))
         );
@@ -691,6 +749,17 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_btngunidadActionPerformed
 
+    private void guarmovimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guarmovimientoActionPerformed
+        // TODO add your handling code here:
+        try {
+            Movimientos mov = new Movimientos(txtdescmovi.getText(),FTipo_Movimiento.obtenert_movimiento_xcodigo(txttipomov1.getText()));
+            FMovimientos.insertarmovimientos(mov);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+        }                             
+    }//GEN-LAST:event_guarmovimientoActionPerformed
+
     public Date DeStringADate(String fecha){
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
         String strFecha = fecha;
@@ -748,6 +817,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
     private javax.swing.JButton btnguardarUnidad;
     private javax.swing.JButton btngunidad;
     private javax.swing.JButton btnnombreCategoria;
+    private javax.swing.JButton guarmovimiento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -757,6 +827,8 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -777,10 +849,12 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPing_tip_movi;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane10;
     private javax.swing.JTabbedPane jTabbedPane11;
+    private javax.swing.JTabbedPane jTabbedPane12;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
@@ -794,6 +868,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
     private javax.swing.JTextField txtapellidosFuncionario;
     private javax.swing.JTextField txtcedfun;
     private javax.swing.JTextField txtcedulaFuncionario;
+    private javax.swing.JTextField txtdescmovi;
     private javax.swing.JTextField txtemailFuncionario;
     private javax.swing.JTextField txtfuncionUnidad;
     private javax.swing.JTextField txtnombreCategoria;
@@ -803,6 +878,7 @@ public class Ingresar_Unidad_1 extends javax.swing.JFrame {
     private javax.swing.JTextField txtnomuni;
     private javax.swing.JTextField txttelefonoFuncionario;
     private javax.swing.JTextField txttipomov;
+    private javax.swing.JTextField txttipomov1;
     private javax.swing.JTextField txtubicacionUnidad;
     // End of variables declaration//GEN-END:variables
 }
