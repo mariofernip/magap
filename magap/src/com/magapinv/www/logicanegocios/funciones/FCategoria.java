@@ -39,7 +39,7 @@ public class FCategoria {
         Categoria dls =null;
         try {
             while (crs.next()) {
-              dls = new Categoria(crs.getString(0),crs.getString(1));
+              dls = new Categoria(crs.getInt(0),crs.getString(1));
                 lstD.add(dls);
             }
         } catch (Exception e) {
@@ -51,7 +51,7 @@ public class FCategoria {
     public static ArrayList<Categoria> obtenerTodaslascategorias() throws Exception {
         ArrayList<Categoria> lst = new ArrayList<Categoria>();
         try {
-            String sql = "select * from bodega.listar_categoria()";
+            String sql = "select * from bodega.categoria";
             ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);
             lst=llenarcategoria(crs);
             crs = null;
@@ -61,8 +61,8 @@ public class FCategoria {
         return lst;
     }
     //obtenerCategoria_xcodigo recibe el nombre devuelve el codigo
-    public static Categoria obtenerCategoria_xcodigo(String n_cat) throws Exception {
-            Categoria cat = new Categoria(null, null);
+    public static Categoria obtenerCategoria_xcodigo(int n_cat) throws Exception {
+            Categoria cat = new Categoria();
             ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
             lstpar.add(new Parametro(1,n_cat));        
             try {
@@ -75,4 +75,22 @@ public class FCategoria {
               }
         return cat;
     }
+    
+    public static Categoria  obtenerCategoria_xnombre(String n_cat) throws Exception {
+            Categoria cat = new Categoria();
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,n_cat));        
+            try {
+                String sql = "Select * from bodega.f_obtener_categoria_xnombre(?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                cat=llenarcategoria(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return cat;
+    }
+    
+   
+            
 }
