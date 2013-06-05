@@ -4,18 +4,8 @@
  */
 package com.magapinv.www.interfacesmagap;
 
-import com.magapinv.www.logicanegocios.clases.Bodega;
-import com.magapinv.www.logicanegocios.clases.Categoria;
-import com.magapinv.www.logicanegocios.clases.Estado_ac;
-import com.magapinv.www.logicanegocios.clases.Funcionario;
-import com.magapinv.www.logicanegocios.clases.Rol;
-import com.magapinv.www.logicanegocios.clases.Unidad;
-import com.magapinv.www.logicanegocios.funciones.FBodega;
-import com.magapinv.www.logicanegocios.funciones.FCategoria;
-import com.magapinv.www.logicanegocios.funciones.FEstado_ac;
-import com.magapinv.www.logicanegocios.funciones.FFuncionario;
-import com.magapinv.www.logicanegocios.funciones.FRol;
-import com.magapinv.www.logicanegocios.funciones.FUnidad;
+import com.magapinv.www.logicanegocios.clases.*;
+import com.magapinv.www.logicanegocios.funciones.*;
 import java.text.DateFormat;
 //import java.sql.Date;
 import java.util.Date;
@@ -47,6 +37,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu3 = new javax.swing.JMenu();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jTabbedPane8 = new javax.swing.JTabbedPane();
@@ -55,7 +46,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         BotonGuardarBodega = new javax.swing.JButton();
-        FechaBodega = new com.toedter.calendar.JDateChooser();
         jTabbedPane9 = new javax.swing.JTabbedPane();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
@@ -94,11 +84,16 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         txtEstado_ac = new javax.swing.JTextField();
         btnGuardarEstado_ac = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jTabbedPane10 = new javax.swing.JTabbedPane();
+        JTtipomovimieto = new javax.swing.JTabbedPane();
+        jTabbedPane12 = new javax.swing.JTabbedPane();
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+
+        jMenu3.setText("jMenu3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
@@ -116,8 +111,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
             }
         });
 
-        FechaBodega.setDateFormatString("yyyy-MM-dd");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -128,10 +121,9 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
                 .addGap(68, 68, 68)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BotonGuardarBodega)
-                    .addComponent(txtUbicacionBodega, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-                    .addComponent(FechaBodega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtUbicacionBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(446, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -141,13 +133,11 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtUbicacionBodega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addComponent(FechaBodega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel4)
                 .addGap(48, 48, 48)
                 .addComponent(BotonGuardarBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(203, Short.MAX_VALUE))
         );
 
         jTabbedPane8.addTab("Datos Bodega", jPanel3);
@@ -438,7 +428,21 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Estado Inventario", jTabbedPane7);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/magapinv/www/interfacesmagap/recursos/LOGO SSTRA1.png"))); // NOI18N
+        jTabbedPane10.addTab("Ingresar", JTtipomovimieto);
+        jTabbedPane10.addTab("tab2", jTabbedPane12);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 951, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Tipo de movimiento", jPanel1);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/magapinv/www/interfacesmagap/recursos/logo_magap.png"))); // NOI18N
 
@@ -455,33 +459,46 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(129, 129, 129))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 14, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(83, 83, 83)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87))
+                .addGap(67, 67, 67))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnGuardarEstado_acActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarEstado_acActionPerformed
+        try {
+            Estado_ac est = new Estado_ac(0,txtEstado_ac.getText());
+            FEstado_ac.insertarEstado_ac(est);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnGuardarEstado_acActionPerformed
+
+    private void btnguardarUnidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarUnidadActionPerformed
+        // TODO add your handling code here:
+        try {
+            Unidad uni = new Unidad(0,txtnombreUnidad.getText(), txtubicacionUnidad.getText(),txtfuncionUnidad.getText());
+            FUnidad.insertarunidad(uni);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnguardarUnidadActionPerformed
 
     private void txtnombreUnidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreUnidadActionPerformed
         // TODO add your handling code here:
@@ -494,7 +511,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         } catch (Exception ex) {
             Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
-        }       
+        }
     }//GEN-LAST:event_btnguardarRolActionPerformed
 
     private void txtemailFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtemailFuncionarioActionPerformed
@@ -518,7 +535,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
         }
-
     }//GEN-LAST:event_btnguadarFuncionarioActionPerformed
 
     private void btnnombreCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnombreCategoriaActionPerformed
@@ -533,55 +549,29 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
     }//GEN-LAST:event_btnnombreCategoriaActionPerformed
 
     private void BotonGuardarBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarBodegaActionPerformed
-        
-        
 
-        try {                                                   
-           Bodega bod = new Bodega();
-          
-            
+        try {
+            Bodega bod = new Bodega();
+
             String fechaBodega = new SimpleDateFormat("yyyy-MM-dd").format(FechaBodega.getDate());
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
             Date dateStr = formatter.parse(fechaBodega);
-           
-            java.sql.Date sqlDate = new java.sql.Date(dateStr.getTime());
-          
-            
 
-            try {       
+            java.sql.Date sqlDate = new java.sql.Date(dateStr.getTime());
+
+            try {
                 Bodega funu = new Bodega(txtUbicacionBodega.getText(),sqlDate);
                 FBodega.insertarbodega(funu);
                 JOptionPane.showMessageDialog(null, "Elemento Bodega Guardado exitosamente");
-            } 
-             catch (Exception ex) {
+            }
+            catch (Exception ex) {
                 Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } 
-         catch (ParseException ex) {
+        }
+        catch (ParseException ex) {
             Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_BotonGuardarBodegaActionPerformed
-
-    private void btnguardarUnidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarUnidadActionPerformed
-        // TODO add your handling code here:
-        try {
-            Unidad uni = new Unidad(0,txtnombreUnidad.getText(), txtubicacionUnidad.getText(),txtfuncionUnidad.getText());
-            FUnidad.insertarunidad(uni);
-
-        } catch (Exception ex) {
-            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnguardarUnidadActionPerformed
-
-    private void btnGuardarEstado_acActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarEstado_acActionPerformed
-         try {
-            Estado_ac est = new Estado_ac(0,txtEstado_ac.getText());
-            FEstado_ac.insertarEstado_ac(est);
-
-        } catch (Exception ex) {
-            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
-        }        
-    }//GEN-LAST:event_btnGuardarEstado_acActionPerformed
 
     public Date DeStringADate(String fecha){
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
@@ -633,13 +623,12 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonGuardarBodega;
-    private com.toedter.calendar.JDateChooser FechaBodega;
+    private javax.swing.JTabbedPane JTtipomovimieto;
     private javax.swing.JButton btnGuardarEstado_ac;
     private javax.swing.JButton btnguadarFuncionario;
     private javax.swing.JButton btnguardarRol;
     private javax.swing.JButton btnguardarUnidad;
     private javax.swing.JButton btnnombreCategoria;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -656,7 +645,9 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -664,6 +655,8 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane10;
+    private javax.swing.JTabbedPane jTabbedPane12;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
