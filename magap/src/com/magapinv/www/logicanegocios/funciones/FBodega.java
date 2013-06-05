@@ -14,8 +14,8 @@ import java.util.ArrayList;
  * @author User
  */
 public class FBodega {
-    public static int insertarbodega(Bodega bod) throws Exception{
-    int codigo=-1;
+    public static boolean insertarbodega(Bodega bod) throws Exception{
+    boolean codigo=false;
     ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
     String sql ="Select * from bodega.insert_bodega(?,?)";
     lstpar.add(new Parametro(1,bod.getUbicacion()));
@@ -24,7 +24,7 @@ public class FBodega {
             ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
             //band=AccesoDatos.ejecutaComando(sql, lstpar);
             while (cres.next()){
-                codigo=cres.getInt(0);
+                codigo=cres.getBoolean(0);
             }
         } catch (Exception ex) {
            throw new Exception("Error al insertar una nueva bodega"+ex.getMessage());
@@ -49,7 +49,7 @@ public class FBodega {
     public static ArrayList<Bodega> obtenerTodaslasbodegas() throws Exception {
         ArrayList<Bodega> lst = new ArrayList<Bodega>();
         try {
-            String sql = "select * from bodega.listar_bodega;";
+            String sql = "select * from bodega.bodega;";
             ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);
             lst=llenarbodega(crs);
             crs = null;
@@ -73,4 +73,24 @@ public class FBodega {
               }
         return fun;
     }
+     
+     
+     //obtenerBodega_xnombre
+     
+       public static Bodega obtenerBodega_xnombre(String ubi) throws Exception {
+            Bodega fun = new Bodega();
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,ubi));        
+            try {
+                String sql = "Select * from bodega.sel_bod_ubicacion(?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                fun=llenarbodega(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return fun;
+    } 
+     
+     
 }
