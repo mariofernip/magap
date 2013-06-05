@@ -4,7 +4,7 @@
  */
 package com.magapinv.www.logicanegocios.clases;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
  *
@@ -23,7 +23,12 @@ public class Bodega {
         this.ubicacion = ubicacion;
         this.fecha_creacion = fecha_creacion;
     }
-   
+    
+   public Bodega(String ubicacion, Date fecha_creacion) {
+        this.ubicacion = ubicacion;
+        this.fecha_creacion = fecha_creacion;
+    }
+    
    
     public String getUbicacion() {
         return ubicacion;
