@@ -17,11 +17,12 @@ public class Inventario {
   private Estado_ac id_estado;
   private Categoria id_categoria;
   private Bodega id_bodega;
+  private int Stock;
 
     public Inventario() {
     }
 
-    public Inventario(int id_inventario, String id_equipo, String marca, String modelo, String descripcion, Estado_ac id_estado, Categoria id_categoria, Bodega id_bodega) {
+    public Inventario(int id_inventario, String id_equipo, String marca, String modelo, String descripcion, Estado_ac id_estado, Categoria id_categoria, Bodega id_bodega, int Stock) {
         this.id_inventario = id_inventario;
         this.id_equipo = id_equipo;
         this.marca = marca;
@@ -30,7 +31,10 @@ public class Inventario {
         this.id_estado = id_estado;
         this.id_categoria = id_categoria;
         this.id_bodega = id_bodega;
+        this.Stock = Stock;
     }
+
+   
 
     
     public int getId_inventario() {
@@ -109,6 +113,20 @@ public class Inventario {
     
     public void setId_bodega(Bodega id_bodega) {
         this.id_bodega = id_bodega;
+    }
+
+    /**
+     * @return the Stock
+     */
+    public int getStock() {
+        return Stock;
+    }
+
+    /**
+     * @param Stock the Stock to set
+     */
+    public void setStock(int Stock) {
+        this.Stock = Stock;
     }
 
     
