@@ -77,5 +77,21 @@ public class FEstado_ac {
               }
         return est;
     }
+      
+     public static Estado_ac obtenerEstado_ac_xnombre(String codigoe) throws Exception {
+            Estado_ac est = new Estado_ac();
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,codigoe));        
+            try {
+                String sql = "Select * from bodega.f_obtener_estado_ac_xnombre(?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                est=llenarEstado_ac(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return est;
+    }  
+      
      
 }
