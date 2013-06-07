@@ -20,11 +20,11 @@ public class FFuncionario_Rol {
     public static int insertarFuncionarioRol (Funcionario_Rol funr) throws Exception{
     int codigo=-1;
     ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
-    String sql ="Select * from bodega.insert_funcionario_rol(?,?,?,?)";
-    lstpar.add(new Parametro(1,funr.getNumero_cedula()));
-    lstpar.add(new Parametro(2,funr.getId_rol()));
+    lstpar.add(new Parametro(1,funr.getNumero_cedula().getCedula()));
+    lstpar.add(new Parametro(2,funr.getId_rol().getId_rol()));
     lstpar.add(new Parametro(3,funr.getFecha_asignacion()));
     lstpar.add(new Parametro(4,funr.getFecha_salida())); 
+    String sql ="Select * from bodega.insert_funcionario_rol(?,?,?,?)";
         try {
             ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
             //band=AccesoDatos.ejecutaComando(sql, lstpar);
