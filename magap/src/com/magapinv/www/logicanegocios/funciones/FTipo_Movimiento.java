@@ -27,7 +27,7 @@ public class FTipo_Movimiento {
                 codigo=cres.getInt(0);
             }
         } catch (Exception ex) {
-           throw new Exception("Error al insertar una Categoria"+ex.getMessage());
+           throw new Exception("Error al insertar un tipo de Inventario"+ex.getMessage());
         }
     
     return codigo;
