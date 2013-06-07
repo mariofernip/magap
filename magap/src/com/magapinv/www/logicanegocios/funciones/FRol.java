@@ -80,5 +80,20 @@ public class FRol {
               }
         return fun;
     }
-    
+       
+       
+      public static Rol obtenerRoles_xnombre(String nombrerol) throws Exception {
+            Rol fun = new Rol();
+            ArrayList <Parametro> lstpar = new  ArrayList<Parametro>();
+            lstpar.add(new Parametro(1,nombrerol));        
+            try {
+                String sql = "Select * from bodega.f_obtener_rol_xnombre(?)";
+                ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql,lstpar);
+                fun=llenarRol(crs).get(0);
+                crs = null;
+            } catch (SQLException exConec) {
+                throw new Exception(exConec.getMessage());
+              }
+        return fun;
+    }
 }
