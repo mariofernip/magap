@@ -51,10 +51,16 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         }
         try {
             cmbbodegaInventario.removeAllItems();
+            cmbbodegarfuncionarioRolBodega.removeAllItems();
             for(Bodega e: FBodega.obtenerTodaslasbodegas()){
                 // System.out.println(e.getNombre_estado());
                 // System.out.println(e.getCedula_funcionario());
                 cmbbodegaInventario.addItem(e.getUbicacion());
+            }
+            for(Bodega e: FBodega.obtenerTodaslasbodegas()){
+                // System.out.println(e.getNombre_estado());
+                // System.out.println(e.getCedula_funcionario());
+                cmbbodegarfuncionarioRolBodega.addItem(e.getUbicacion());
             }
 
         } catch (Exception e) {
@@ -172,6 +178,17 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         txtnombreFuncionario = new javax.swing.JTextField();
         txtcedulafuncionarioRol = new javax.swing.JTextField();
         cmbrolFuncionario = new javax.swing.JComboBox();
+        jTabbedPane13 = new javax.swing.JTabbedPane();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        lblfuncionaroBodega = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        txtcedulafuncionarioRolBodega = new javax.swing.JTextField();
+        btncargarFuncionarioRolBodega = new javax.swing.JButton();
+        cmbbodegarfuncionarioRolBodega = new javax.swing.JComboBox();
+        jLabel30 = new javax.swing.JLabel();
+        datefechaFuncionrioRolBodega = new com.toedter.calendar.JDateChooser();
+        btnguardarFuncionarioRolBodega = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -210,7 +227,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtUbicacionBodega, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
                     .addComponent(FechaBodega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(589, Short.MAX_VALUE))
+                .addContainerGap(577, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BotonGuardarBodega)
@@ -259,7 +276,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addGap(68, 68, 68)
                 .addComponent(txtnombreCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(539, Short.MAX_VALUE))
+                .addContainerGap(527, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnnombreCategoria)
@@ -329,7 +346,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(txtapellidosFuncionario)
                     .addComponent(txtcedulaFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtemailFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE))
-                .addContainerGap(553, Short.MAX_VALUE))
+                .addContainerGap(541, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnguadarFuncionario)
@@ -385,7 +402,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addGap(57, 57, 57)
                 .addComponent(txtnombreRol, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(644, Short.MAX_VALUE))
+                .addContainerGap(632, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnguardarRol)
@@ -436,7 +453,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(jLabel13)
                     .addComponent(jLabel14)
                     .addComponent(jLabel12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 258, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtnombreUnidad)
                     .addComponent(txtubicacionUnidad)
@@ -490,7 +507,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addComponent(jLabel15)
                 .addGap(60, 60, 60)
                 .addComponent(txtEstado_ac, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(632, Short.MAX_VALUE))
+                .addContainerGap(620, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnGuardarEstado_ac)
@@ -586,7 +603,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtstock, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cmbestadoInventario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addContainerGap(181, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnguardarInventario)
@@ -652,7 +669,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                         .addComponent(jLabel25)
                         .addGap(125, 125, 125)
                         .addComponent(txtTipoMovimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 588, Short.MAX_VALUE)))
+                        .addGap(0, 576, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -694,6 +711,11 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jLabel28.setText("Nombre del Funcionario");
 
         cmbrolFuncionario.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbrolFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbrolFuncionarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -717,7 +739,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(btncargarNombreFuncionario))
                                 .addComponent(txtnombreFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 454, Short.MAX_VALUE))
+                        .addGap(0, 442, Short.MAX_VALUE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(datefuncionarioRol, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -731,11 +753,10 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btncargarNombreFuncionario)
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel27)
-                                .addComponent(txtcedulafuncionarioRol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel27)
+                            .addComponent(txtcedulafuncionarioRol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btncargarNombreFuncionario))
                         .addGap(28, 28, 28)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel28)
@@ -744,16 +765,93 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel26)
                             .addComponent(cmbrolFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnguardarFuncionarioRol, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(datefuncionarioRol, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(223, Short.MAX_VALUE))
+                        .addGap(30, 30, 30)
+                        .addComponent(datefuncionarioRol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(16, 16, 16)
+                .addComponent(btnguardarFuncionarioRol, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(175, Short.MAX_VALUE))
         );
 
         jTabbedPane12.addTab("Ingresar Funcionario Rol", jPanel9);
 
         jTabbedPane1.addTab("Funcionario Rol", jTabbedPane12);
+
+        jLabel29.setText("Cedula de Funcionario");
+
+        lblfuncionaroBodega.setText("Presiona el boton cragar para desplegar el nombre del Funcionario");
+
+        jLabel31.setText("Bodega asignada");
+
+        btncargarFuncionarioRolBodega.setText("Cargar Nombre");
+        btncargarFuncionarioRolBodega.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncargarFuncionarioRolBodegaActionPerformed(evt);
+            }
+        });
+
+        cmbbodegarfuncionarioRolBodega.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel30.setText("Fecha de Ingreso");
+
+        btnguardarFuncionarioRolBodega.setText("Guardar");
+        btnguardarFuncionarioRolBodega.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnguardarFuncionarioRolBodegaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel29)
+                    .addComponent(jLabel31)
+                    .addComponent(jLabel30))
+                .addGap(88, 88, 88)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmbbodegarfuncionarioRolBodega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblfuncionaroBodega)
+                        .addGroup(jPanel10Layout.createSequentialGroup()
+                            .addComponent(txtcedulafuncionarioRolBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btncargarFuncionarioRolBodega)))
+                    .addComponent(datefechaFuncionrioRolBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(475, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnguardarFuncionarioRolBodega)
+                .addContainerGap())
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(txtcedulafuncionarioRolBodega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btncargarFuncionarioRolBodega))
+                .addGap(18, 18, 18)
+                .addComponent(lblfuncionaroBodega)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(cmbbodegarfuncionarioRolBodega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel30)
+                    .addComponent(datefechaFuncionrioRolBodega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addComponent(btnguardarFuncionarioRolBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(237, Short.MAX_VALUE))
+        );
+
+        jTabbedPane13.addTab("Ingresar Funcionario Rol Bodega", jPanel10);
+
+        jTabbedPane1.addTab("Funcionario Rol Bodega", jTabbedPane13);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/magapinv/www/interfacesmagap/recursos/logo_magap.png"))); // NOI18N
 
@@ -778,8 +876,9 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(127, 127, 127))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -900,7 +999,7 @@ public void SoloLetras(JTextField stock){
     private void BotonGuardarBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarBodegaActionPerformed
 
         try {
-            Bodega bod = new Bodega();
+            
          
             String fechaBodega = new SimpleDateFormat("yyyy-MM-dd").format(FechaBodega.getDate());
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
@@ -927,7 +1026,7 @@ public void SoloLetras(JTextField stock){
     }//GEN-LAST:event_txtmarcaInventarioActionPerformed
 
     private void btnguardarInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarInventarioActionPerformed
-        // TODO add your handling code here:        
+         
         Inventario inv = new Inventario();
         String estado = (String)cmbestadoInventario.getSelectedItem();
         String categoria = (String)cmbcategoriaInventario.getSelectedItem();
@@ -981,23 +1080,64 @@ public void SoloLetras(JTextField stock){
     }//GEN-LAST:event_btncargarNombreFuncionarioActionPerformed
 
     private void btnguardarFuncionarioRolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarFuncionarioRolActionPerformed
-        // TODO add your handling code here:
-        String fechaBodega = new SimpleDateFormat("yyyy-MM-dd").format(FechaBodega.getDate());
+        Funcionario_Rol fun= new Funcionario_Rol();
+        String fechaBodega = new SimpleDateFormat("yyyy-MM-dd").format(datefuncionarioRol.getDate());
         java.sql.Date fecha;
+        java.sql.Date fecha1=null;
+        
+        String rol = (String)cmbrolFuncionario.getSelectedItem();   
+        
         try {
             fecha = formatoFecha(fechaBodega);
+            try {
+                fun.setId_rol(FRol.obtenerRoles_xnombre(rol));
+                fun.setNumero_cedula(FFuncionario.obtenerFuncionario_xcodigo(txtcedulafuncionarioRol.getText()));
+                 Funcionario_Rol funr= new Funcionario_Rol(FFuncionario.obtenerFuncionario_xcodigo(txtcedulafuncionarioRol.getText()), FRol.obtenerRoles_xnombre(rol), fecha , fecha1);    
+                 FFuncionario_Rol.insertarFuncionarioRol(funr);
+            } catch (Exception ex) {
+                Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } catch (ParseException ex) {
             Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-       String rol = (String)cmbrolFuncionario.getSelectedItem();     
-       
-       
-       
-       
-       
+  
     }//GEN-LAST:event_btnguardarFuncionarioRolActionPerformed
+
+    private void btncargarFuncionarioRolBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncargarFuncionarioRolBodegaActionPerformed
+        
+         String nombreFuncionario, apellidoFuncionario;
+        try {
+            nombreFuncionario = FFuncionario.obtenerFuncionario_xcodigo(txtcedulafuncionarioRolBodega.getText()).getNombres();
+            apellidoFuncionario = FFuncionario.obtenerFuncionario_xcodigo(txtcedulafuncionarioRolBodega.getText()).getApellidos();           
+            lblfuncionaroBodega.setText(nombreFuncionario + apellidoFuncionario);
+        } catch (Exception ex) {
+            Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_btncargarFuncionarioRolBodegaActionPerformed
+
+    private void cmbrolFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbrolFuncionarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbrolFuncionarioActionPerformed
+
+    private void btnguardarFuncionarioRolBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarFuncionarioRolBodegaActionPerformed
+       Funcionario_Rol_Bodega funrrb = new Funcionario_Rol_Bodega();
+        try {
+            
+            String fechaBodega = new SimpleDateFormat("yyyy-MM-dd").format(datefechaFuncionrioRolBodega.getDate());
+            java.sql.Date fecha;
+            java.sql.Date fecha1=null;
+                    
+            fecha = formatoFecha(fechaBodega);
+            String bod = (String)cmbbodegarfuncionarioRolBodega.getSelectedItem(); 
+            String rol = "Bodeguero";
+             funrrb.setId_rol(FRol.obtenerRoles_xnombre(rol));
+             Funcionario_Rol_Bodega funrb= new Funcionario_Rol_Bodega(FFuncionario.obtenerFuncionario_xcodigo(txtcedulafuncionarioRolBodega.getText()), FBodega.obtenerBodega_xnombre(bod),FRol.obtenerRoles_xnombre(rol), fecha, fecha1);
+             FFuncionario_Rol_Bodega.insertarFuncionarioRolBodega(funrb);
+        } catch (Exception ex) {
+            Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
+        }    
+    }//GEN-LAST:event_btnguardarFuncionarioRolBodegaActionPerformed
 
             
             
@@ -1055,18 +1195,22 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JButton BotonGuardarBodega;
     private com.toedter.calendar.JDateChooser FechaBodega;
     private javax.swing.JButton btnGuardarEstado_ac;
+    private javax.swing.JButton btncargarFuncionarioRolBodega;
     private javax.swing.JButton btncargarNombreFuncionario;
     private javax.swing.JButton btnguadarFuncionario;
     private javax.swing.JButton btnguardarFuncionarioRol;
+    private javax.swing.JButton btnguardarFuncionarioRolBodega;
     private javax.swing.JButton btnguardarInventario;
     private javax.swing.JButton btnguardarRol;
     private javax.swing.JButton btnguardarTipoMovimiento;
     private javax.swing.JButton btnguardarUnidad;
     private javax.swing.JButton btnnombreCategoria;
     private javax.swing.JComboBox cmbbodegaInventario;
+    private javax.swing.JComboBox cmbbodegarfuncionarioRolBodega;
     private javax.swing.JComboBox cmbcategoriaInventario;
     private javax.swing.JComboBox cmbestadoInventario;
     private javax.swing.JComboBox cmbrolFuncionario;
+    private com.toedter.calendar.JDateChooser datefechaFuncionrioRolBodega;
     private com.toedter.calendar.JDateChooser datefuncionarioRol;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1089,7 +1233,10 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1101,6 +1248,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1114,6 +1262,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTabbedPane jTabbedPane10;
     private javax.swing.JTabbedPane jTabbedPane11;
     private javax.swing.JTabbedPane jTabbedPane12;
+    private javax.swing.JTabbedPane jTabbedPane13;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
@@ -1122,6 +1271,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTabbedPane jTabbedPane8;
     private javax.swing.JTabbedPane jTabbedPane9;
+    private javax.swing.JLabel lblfuncionaroBodega;
     private javax.swing.JTextField txtEstado_ac;
     private javax.swing.JTextField txtTipoMovimiento;
     private javax.swing.JTextField txtUbicacionBodega;
@@ -1129,6 +1279,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTextField txtapellidosFuncionario;
     private javax.swing.JTextField txtcedulaFuncionario;
     private javax.swing.JTextField txtcedulafuncionarioRol;
+    private javax.swing.JTextField txtcedulafuncionarioRolBodega;
     private javax.swing.JTextField txtemailFuncionario;
     private javax.swing.JTextField txtfuncionUnidad;
     private javax.swing.JTextField txtidentificadorInventario;
