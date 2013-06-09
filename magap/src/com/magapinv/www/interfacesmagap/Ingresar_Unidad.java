@@ -193,6 +193,14 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         txtbced = new javax.swing.JTextField();
         txtbuni = new javax.swing.JTextField();
         btngufunu = new javax.swing.JButton();
+        jTabbedPane15 = new javax.swing.JTabbedPane();
+        jTabbedPane16 = new javax.swing.JTabbedPane();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        txtdescmovi = new javax.swing.JTextField();
+        guarmovimiento = new javax.swing.JButton();
+        txttipomov1 = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -902,6 +910,59 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Funcionario Unidad", jTabbedPane14);
 
+        jLabel34.setText("Ingrese la descripcion del movimiento");
+
+        guarmovimiento.setText("Guardar");
+        guarmovimiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guarmovimientoActionPerformed(evt);
+            }
+        });
+
+        jLabel35.setText("Ingrese el tipo de movimiento");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(261, 261, 261)
+                        .addComponent(guarmovimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(70, 70, 70)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txttipomov1, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                            .addComponent(txtdescmovi))))
+                .addContainerGap(524, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(txtdescmovi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(txttipomov1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
+                .addComponent(guarmovimiento)
+                .addGap(128, 128, 128))
+        );
+
+        jTabbedPane16.addTab("Ingreso de movimientos", jPanel12);
+
+        jTabbedPane15.addTab("Movimiento", jTabbedPane16);
+
+        jTabbedPane1.addTab("Movimientos", jTabbedPane15);
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/magapinv/www/interfacesmagap/recursos/logo_magap.png"))); // NOI18N
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/magapinv/www/interfacesmagap/recursos/LOGO SSTRA1.png"))); // NOI18N
@@ -1209,6 +1270,17 @@ public void SoloLetras(JTextField stock){
         }
     }//GEN-LAST:event_btngufunuActionPerformed
 
+    private void guarmovimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guarmovimientoActionPerformed
+        // TODO add your handling code here:
+        try {
+            Movimientos mov = new Movimientos(txtdescmovi.getText(),FTipo_Movimiento.obtenert_movimiento_xcodigo(txttipomov1.getText()));
+            FMovimientos.insertarmovimientos(mov);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_guarmovimientoActionPerformed
+
             
             
     public Date DeStringADate(String fecha){
@@ -1280,6 +1352,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JComboBox cmbcategoriaInventario;
     private javax.swing.JComboBox cmbestadoInventario;
     private javax.swing.JComboBox cmbrolFuncionario;
+    private javax.swing.JButton guarmovimiento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1307,6 +1380,8 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1320,6 +1395,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1335,6 +1411,8 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTabbedPane jTabbedPane12;
     private javax.swing.JTabbedPane jTabbedPane13;
     private javax.swing.JTabbedPane jTabbedPane14;
+    private javax.swing.JTabbedPane jTabbedPane15;
+    private javax.swing.JTabbedPane jTabbedPane16;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
@@ -1354,6 +1432,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTextField txtcedulaFuncionario;
     private javax.swing.JTextField txtcedulafuncionarioRol;
     private javax.swing.JTextField txtcedulafuncionarioRolBodega;
+    private javax.swing.JTextField txtdescmovi;
     private javax.swing.JTextField txtemailFuncionario;
     private javax.swing.JTextField txtfuncionUnidad;
     private javax.swing.JTextField txtidentificadorInventario;
@@ -1366,6 +1445,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTextField txtnombresFuncionario;
     private javax.swing.JTextField txtstock;
     private javax.swing.JTextField txttelefonoFuncionario;
+    private javax.swing.JTextField txttipomov1;
     private javax.swing.JTextField txtubicacionUnidad;
     // End of variables declaration//GEN-END:variables
 }
