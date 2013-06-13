@@ -94,7 +94,7 @@ public class FFuncionario {
         return cn;
     }
        public void llenarTabla(JTable tabla)throws Exception{
-        ps= getConexion().prepareStatement("select ");
+        ps= getConexion().prepareStatement("select * from bodega.listar_funcionario ");
         rs=ps.executeQuery();
         rsm=rs.getMetaData();
        ArrayList<Object[]> datos =new ArrayList<Object[]>();

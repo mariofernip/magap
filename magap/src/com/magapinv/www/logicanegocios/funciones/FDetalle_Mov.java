@@ -77,7 +77,7 @@ public class FDetalle_Mov {
         return cn;
     }
       public void llenarTabla(JTable tabla)throws Exception{
-        ps=getConexion().prepareStatement("select s_dni,s_apellidos,s_nombres from socios");
+        ps=getConexion().prepareStatement("select *from bodega.listar_detallemov");
         rs=ps.executeQuery();
         rsm=rs.getMetaData();
         ArrayList<Object[]> datos =new ArrayList<Object[]>();
