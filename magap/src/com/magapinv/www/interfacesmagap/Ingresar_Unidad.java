@@ -6,6 +6,7 @@ package com.magapinv.www.interfacesmagap;
 
 import com.magapinv.www.logicanegocios.clases.*;
 import com.magapinv.www.logicanegocios.funciones.*;
+import com.sun.org.apache.bcel.internal.generic.RET;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.text.DateFormat;
@@ -17,6 +18,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import java.sql.*;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -102,12 +105,17 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         BotonGuardarBodega = new javax.swing.JButton();
-        jTabbedPane9 = new javax.swing.JTabbedPane();
+        jPanel14 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         txtnombreCategoria = new javax.swing.JTextField();
         btnnombreCategoria = new javax.swing.JButton();
+        jPanel15 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -121,6 +129,9 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         txtapellidosFuncionario = new javax.swing.JTextField();
         txttelefonoFuncionario = new javax.swing.JTextField();
         txtemailFuncionario = new javax.swing.JTextField();
+        jPanel16 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
         jTabbedPane5 = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -135,6 +146,9 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         txtubicacionUnidad = new javax.swing.JTextField();
         txtfuncionUnidad = new javax.swing.JTextField();
         btnguardarUnidad = new javax.swing.JButton();
+        jPanel17 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -165,6 +179,9 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         txtTipoMovimiento = new javax.swing.JTextField();
         btnguardarTipoMovimiento = new javax.swing.JButton();
+        jPanel19 = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
         jTabbedPane12 = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
@@ -193,6 +210,9 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         txtbced = new javax.swing.JTextField();
         txtbuni = new javax.swing.JTextField();
         btngufunu = new javax.swing.JButton();
+        jPanel20 = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTable7 = new javax.swing.JTable();
         jTabbedPane15 = new javax.swing.JTabbedPane();
         jTabbedPane16 = new javax.swing.JTabbedPane();
         jPanel12 = new javax.swing.JPanel();
@@ -201,6 +221,11 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         guarmovimiento = new javax.swing.JButton();
         txttipomov1 = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
+        jPanel18 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
+        jTabbedPane17 = new javax.swing.JTabbedPane();
+        jPanel13 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -214,6 +239,12 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(800, 600));
 
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+
+        jTabbedPane2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setText("Ubicacion de la bodega");
 
@@ -261,10 +292,49 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Ingresar Nueva Bodega", jTabbedPane8);
 
-        jTabbedPane9.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
-        jTabbedPane2.addTab("Modificar Atributos de Bodega", jTabbedPane9);
+        jPanel14.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                jPanel14ComponentHidden(evt);
+            }
+        });
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 625, Short.MAX_VALUE))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 49, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Modificar Bodega", jPanel14);
 
         jTabbedPane1.addTab("Bodega", jTabbedPane2);
+
+        jTabbedPane3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane3MouseClicked(evt);
+            }
+        });
 
         jLabel11.setText("Nombre de la Categoria");
 
@@ -304,7 +374,43 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane3.addTab("Ingresar Nueva Categoria", jPanel6);
 
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable2);
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 625, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 49, Short.MAX_VALUE))
+        );
+
+        jTabbedPane3.addTab("Modificar categoria", jPanel15);
+
         jTabbedPane1.addTab("Categoria", jTabbedPane3);
+
+        jTabbedPane4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane4MouseClicked(evt);
+            }
+        });
 
         jLabel5.setText("Cédula");
 
@@ -390,6 +496,36 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane4.addTab("Ingresar Nuevo Funcionario", jPanel4);
 
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(jTable3);
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 625, Short.MAX_VALUE))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 49, Short.MAX_VALUE))
+        );
+
+        jTabbedPane4.addTab("Modificar Funcionario", jPanel16);
+
         jTabbedPane1.addTab("Funcionario", jTabbedPane4);
 
         jLabel10.setText("Nombre de Rol");
@@ -431,6 +567,12 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jTabbedPane5.addTab("Ingresar Nuevo Rol", jPanel5);
 
         jTabbedPane1.addTab("Rol", jTabbedPane5);
+
+        jTabbedPane6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane6MouseClicked(evt);
+            }
+        });
 
         jLabel12.setText("Nombre de la Unidad");
 
@@ -494,6 +636,36 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         );
 
         jTabbedPane6.addTab("Ingresar Nueva Unidad", jPanel7);
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(jTable4);
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 625, Short.MAX_VALUE))
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 49, Short.MAX_VALUE))
+        );
+
+        jTabbedPane6.addTab("Modificar Unidad", jPanel17);
 
         jTabbedPane1.addTab("Unidad", jTabbedPane6);
 
@@ -654,6 +826,12 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Inventario", jTabbedPane11);
 
+        jTabbedPane10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane10MouseClicked(evt);
+            }
+        });
+
         jLabel25.setText("Tipo de Movimiento");
 
         btnguardarTipoMovimiento.setText("Guardar");
@@ -693,6 +871,36 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         );
 
         jTabbedPane10.addTab("Insertar Nuevo tipo de Movimiento", jPanel1);
+
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane7.setViewportView(jTable6);
+
+        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
+        jPanel19.setLayout(jPanel19Layout);
+        jPanel19Layout.setHorizontalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel19Layout.createSequentialGroup()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 625, Short.MAX_VALUE))
+        );
+        jPanel19Layout.setVerticalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel19Layout.createSequentialGroup()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 49, Short.MAX_VALUE))
+        );
+
+        jTabbedPane10.addTab("Modificar tipo de movimiento", jPanel19);
 
         jTabbedPane1.addTab("Tipo Movimiento", jTabbedPane10);
 
@@ -856,6 +1064,12 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Funcionario Rol Bodega", jTabbedPane13);
 
+        jTabbedPane14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane14MouseClicked(evt);
+            }
+        });
+
         jLabel32.setText("Ingrese el numero de cedula");
 
         jLabel33.setText("Ingrese el nombre de la unidad");
@@ -908,7 +1122,43 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane14.addTab("Ingresar", jPanel11);
 
+        jTable7.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane8.setViewportView(jTable7);
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 625, Short.MAX_VALUE))
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 49, Short.MAX_VALUE))
+        );
+
+        jTabbedPane14.addTab("Modificar Funcionario unidad", jPanel20);
+
         jTabbedPane1.addTab("Funcionario Unidad", jTabbedPane14);
+
+        jTabbedPane15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane15MouseClicked(evt);
+            }
+        });
 
         jLabel34.setText("Ingrese la descripcion del movimiento");
 
@@ -961,7 +1211,52 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane15.addTab("Movimiento", jTabbedPane16);
 
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable5);
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 625, Short.MAX_VALUE))
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 49, Short.MAX_VALUE))
+        );
+
+        jTabbedPane15.addTab("Modificar movimientos", jPanel18);
+
         jTabbedPane1.addTab("Movimientos", jTabbedPane15);
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1077, Short.MAX_VALUE)
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 476, Short.MAX_VALUE)
+        );
+
+        jTabbedPane17.addTab("Ingresar", jPanel13);
+
+        jTabbedPane1.addTab("Detalle movimientos", jTabbedPane17);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/magapinv/www/interfacesmagap/recursos/logo_magap.png"))); // NOI18N
 
@@ -1106,31 +1401,6 @@ public void SoloLetras(JTextField stock){
         return sqlDate;
     }
     
-    private void BotonGuardarBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarBodegaActionPerformed
-
-        try {
-            
-         
-            String fechaBodega = new SimpleDateFormat("yyyy-MM-dd").format(FechaBodega.getDate());
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-            Date dateStr = formatter.parse(fechaBodega);
-
-            java.sql.Date sqlDate = new java.sql.Date(dateStr.getTime());
-
-            try {
-                Bodega funu = new Bodega(txtUbicacionBodega.getText(),sqlDate);
-                FBodega.insertarbodega(funu);
-                JOptionPane.showMessageDialog(null, "Elemento Bodega Guardado exitosamente");
-            }
-            catch (Exception ex) {
-                Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        catch (ParseException ex) {
-            Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_BotonGuardarBodegaActionPerformed
-
     private void txtmarcaInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmarcaInventarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtmarcaInventarioActionPerformed
@@ -1281,6 +1551,104 @@ public void SoloLetras(JTextField stock){
         }
     }//GEN-LAST:event_guarmovimientoActionPerformed
 
+    private void BotonGuardarBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarBodegaActionPerformed
+
+        try {
+
+            String fechaBodega = new SimpleDateFormat("yyyy-MM-dd").format(FechaBodega.getDate());
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            Date dateStr = formatter.parse(fechaBodega);
+
+            java.sql.Date sqlDate = new java.sql.Date(dateStr.getTime());
+
+            try {
+                Bodega funu = new Bodega(txtUbicacionBodega.getText(),sqlDate);
+                FBodega.insertarbodega(funu);
+                JOptionPane.showMessageDialog(null, "Elemento Bodega Guardado exitosamente");
+            }
+            catch (Exception ex) {
+                Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        catch (ParseException ex) {
+            Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_BotonGuardarBodegaActionPerformed
+
+    private void jPanel14ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel14ComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel14ComponentHidden
+
+    private void jTabbedPane2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane2MouseClicked
+        // TODO add your handling code here:
+        FBodega bod=new FBodega();
+        try {
+            bod.llenarTabla(jTable1);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }//GEN-LAST:event_jTabbedPane2MouseClicked
+
+    private void jTabbedPane3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane3MouseClicked
+        // TODO add your handling code here:
+        FCategoria cat=new FCategoria();
+        try {
+            cat.llenarTabla(jTable1);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }//GEN-LAST:event_jTabbedPane3MouseClicked
+
+    private void jTabbedPane4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane4MouseClicked
+        // TODO add your handling code here:
+        FFuncionario fun=new FFuncionario();
+        try {
+            fun.llenarTabla(jTable1);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }//GEN-LAST:event_jTabbedPane4MouseClicked
+
+    private void jTabbedPane6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane6MouseClicked
+        // TODO add your handling code here:
+        FUnidad bod=new FUnidad();
+        try {
+            bod.llenarTabla(jTable1);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }//GEN-LAST:event_jTabbedPane6MouseClicked
+
+    private void jTabbedPane15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane15MouseClicked
+        // TODO add your handling code here:
+        FMovimientos bod=new FMovimientos();
+        try {
+            bod.llenarTabla(jTable1);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }//GEN-LAST:event_jTabbedPane15MouseClicked
+
+    private void jTabbedPane10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane10MouseClicked
+        // TODO add your handling code here:
+        FTipo_Movimiento bod=new FTipo_Movimiento();
+        try {
+            bod.llenarTabla(jTable1);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }//GEN-LAST:event_jTabbedPane10MouseClicked
+
+    private void jTabbedPane14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane14MouseClicked
+        // TODO add your handling code here:
+        FFuncionario_Unidad bod=new FFuncionario_Unidad();
+        try {
+            bod.llenarTabla(jTable1);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }//GEN-LAST:event_jTabbedPane14MouseClicked
+
             
             
     public Date DeStringADate(String fecha){
@@ -1396,7 +1764,15 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -1405,6 +1781,13 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane10;
     private javax.swing.JTabbedPane jTabbedPane11;
@@ -1413,6 +1796,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTabbedPane jTabbedPane14;
     private javax.swing.JTabbedPane jTabbedPane15;
     private javax.swing.JTabbedPane jTabbedPane16;
+    private javax.swing.JTabbedPane jTabbedPane17;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
@@ -1420,7 +1804,13 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTabbedPane jTabbedPane6;
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTabbedPane jTabbedPane8;
-    private javax.swing.JTabbedPane jTabbedPane9;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
+    private javax.swing.JTable jTable6;
+    private javax.swing.JTable jTable7;
     private javax.swing.JLabel lblfuncionaroBodega;
     private javax.swing.JTextField txtEstado_ac;
     private javax.swing.JTextField txtTipoMovimiento;
