@@ -8,14 +8,26 @@ import com.magapinv.www.accesodatos.AccesoDatos;
 import com.magapinv.www.accesodatos.ConjuntoResultado;
 import com.magapinv.www.accesodatos.Parametro;
 import com.magapinv.www.logicanegocios.clases.Dado_Baja;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author User
  */
 public class FDado_Baja {
+    private Connection cn;
+    private ResultSet rs;
+    private PreparedStatement ps;
+    private ResultSetMetaData rsm;
+    DefaultTableModel dtm;
     
     public static int insertarDefectuso (Dado_Baja dad) throws Exception{
     int codigo=-1;
@@ -67,6 +79,29 @@ public class FDado_Baja {
         }
         return lst;
     }  
+        private Connection getConexion()throws Exception{
+        Class.forName("org.postgresql.Driver");
+        cn=DriverManager.getConnection("jdbc:postgresql://localhost:5433/inv_magap","postgres","sql1");
+        return cn;
+    }
+      public void llenarTabla(JTable tabla)throws Exception{
+        ps=getConexion().prepareStatement("select s_dni,s_apellidos,s_nombres from socios");
+        rs=ps.executeQuery();
+        rsm=rs.getMetaData();
+        ArrayList<Object[]> datos =new ArrayList<Object[]>();
+        while (rs.next()) {            
+            Object[] filas=new Object[rsm.getColumnCount()];
+            for (int i = 0; i < filas.length; i++) {
+                filas[i]=rs.getObject(i+1);
+                
+            }
+            datos.add(filas);
+        }
+        dtm=(DefaultTableModel)tabla.getModel();
+        for (int i = 0; i <datos.size(); i++) {
+            dtm.addRow(datos.get(i));
+        }
+    }
      
     
     
