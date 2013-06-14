@@ -108,6 +108,11 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jPanel14 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        txt_modbod = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel36 = new javax.swing.JLabel();
+        txtidbod = new javax.swing.JTextField();
+        txtfecha_mod = new javax.swing.JTextField();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
@@ -316,19 +321,53 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable1);
 
+        jButton1.setText("Modificar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel36.setText("Ubicacion de la bodega");
+
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 625, Short.MAX_VALUE))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addComponent(jButton1))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addComponent(jLabel36)
+                        .addGap(68, 68, 68)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtfecha_mod, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtidbod, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                                .addComponent(txt_modbod)))))
+                .addGap(0, 230, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 49, Short.MAX_VALUE))
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_modbod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel36))
+                .addGap(18, 18, 18)
+                .addComponent(txtidbod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtfecha_mod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Modificar Bodega", jPanel14);
@@ -1656,7 +1695,20 @@ public void SoloLetras(JTextField stock){
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
+        int fila = jTable1.rowAtPoint(evt.getPoint());
+        txt_modbod.setText(jTable1.getValueAt(fila,1).toString());
+        txtidbod.setText(jTable1.getValueAt(fila,0).toString());
+        txtfecha_mod.setText(jTable1.getValueAt(fila,2).toString());
     }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+         Bodega bod = new Bodega(txtidbod.getText(),txtfecha_mod.getText(),txt_modbod.getText());
+         FBodega.actualizarbodega(bod);
+        } catch (Exception ex) {
+            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
             
             
@@ -1730,6 +1782,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JComboBox cmbestadoInventario;
     private javax.swing.JComboBox cmbrolFuncionario;
     private javax.swing.JButton guarmovimiento;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1759,6 +1812,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1824,6 +1878,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTextField txtEstado_ac;
     private javax.swing.JTextField txtTipoMovimiento;
     private javax.swing.JTextField txtUbicacionBodega;
+    private javax.swing.JTextField txt_modbod;
     private javax.swing.JTextArea txtadescripcionInventario;
     private javax.swing.JTextField txtapellidosFuncionario;
     private javax.swing.JTextField txtbced;
@@ -1833,7 +1888,9 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTextField txtcedulafuncionarioRolBodega;
     private javax.swing.JTextField txtdescmovi;
     private javax.swing.JTextField txtemailFuncionario;
+    private javax.swing.JTextField txtfecha_mod;
     private javax.swing.JTextField txtfuncionUnidad;
+    private javax.swing.JTextField txtidbod;
     private javax.swing.JTextField txtidentificadorInventario;
     private javax.swing.JTextField txtmarcaInventario;
     private javax.swing.JTextField txtmodeloInventario;
