@@ -8,20 +8,21 @@ package com.magapinv.www.logicanegocios.funcionesseguridad;
 import com.magapinv.www.accesodatos.AccesoDatos;
 import com.magapinv.www.accesodatos.ConjuntoResultado;
 import com.magapinv.www.accesodatos.Parametro;
-import com.magapinv.www.logicanegocios.clases.Rol;
+import com.magapinv.www.logicanegocios.clasesseguridad.Rols;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 
-public class FRol {
+public class FRols {
     
     
-    public static boolean insertarRol(Rol rol) throws Exception{
+    public static boolean insertarRol(Rols rol) throws Exception{
         boolean band=false;
         ArrayList<Parametro> lisP =new ArrayList<Parametro>();
         String sql ="select * from seguridad.f_insertar_rol(?,?)";
         lisP.add(new Parametro(1, rol.getId_rol()));
-        lisP.add(new Parametro(2, rol.getNombre_rol()));
+        lisP.add(new Parametro(2, rol.getDescripcion_rol()));
         try {
             ConjuntoResultado crs =AccesoDatos.ejecutaQuery(sql,lisP);
               //if (crs.getString(0).equals("true"));
@@ -33,8 +34,8 @@ public class FRol {
     }
     
     //PERMITE MOSTRAR EL ROL DE UN USUARIO MEDIANTE UN CÓDIGO DETERMINADO
-     public static Rol obtenerRolesxCodigo(String codigo) throws Exception{
-        Rol rols =null;
+     public static Rols obtenerRolesxCodigo(String codigo) throws Exception{
+        Rols rols =null;
         ConjuntoResultado crs =null;
         String sql ="Select * from seguridad.f_obtenertodosroles_xcodigo";                
         ArrayList<Parametro> lstpar =new ArrayList<Parametro>();     
@@ -50,8 +51,8 @@ public class FRol {
     }
      
      //PERMITE MOSTRAR EL ROL DE UN USUARIO MEDIANTE UN NOMNBRE DETERMINADO
-     public static Rol obtenerRolesxNombre(String nombre) throws Exception{
-        Rol rols =null;
+     public static Rols obtenerRolesxNombre(String nombre) throws Exception{
+        Rols rols =null;
         
         ConjuntoResultado crs =null;
         String sql ="SELECT id_rol, descripcion_rol FROM seguridad.rol where descripcion_rol=?";                
@@ -61,9 +62,9 @@ public class FRol {
          try {
              crs=AccesoDatos.ejecutaQuery(sql,lstpar);
              while (crs.next()) {                                  
-                 rols =new Rol();
+                 rols =new Rols();
                  rols.setId_rol(crs.getString("id_rol"));
-                 rols.setNombre_rol(nombre);
+                 rols.setDescripcion_rol(nombre);
              }
          } catch (Exception e) {
             throw new Exception("Error al ejecuetar la sentencia");
@@ -71,12 +72,12 @@ public class FRol {
         return rols;
     }
      //LLENAR ROLES
-     public static ArrayList<Rol> llenarRoles(ConjuntoResultado crs) throws Exception {
-        ArrayList<Rol> lstR = new ArrayList<Rol>();
-        Rol rls =null;
+     public static ArrayList<Rols> llenarRoles(ConjuntoResultado crs) throws Exception {
+        ArrayList<Rols> lstR = new ArrayList<Rols>();
+        Rols rls =null;
         try {
             while (crs.next()) {
-                rls = new Rol(crs.getString("pcodigo"),crs.getString("pnombre"));
+                rls = new Rols(crs.getString("pcodigo"),crs.getString("pnombre"));
                 lstR.add(rls);
             }
         } catch (Exception e) {
@@ -88,8 +89,8 @@ public class FRol {
      
      
     //PERMITE MOSTRAR TODOS LOS ROLES DE LA BASE DE DATOS
-      public static ArrayList<Rol> obtenerTodoslosRoles() throws Exception {
-        ArrayList<Rol> lst = new ArrayList<Rol>();
+      public static ArrayList<Rols> obtenerTodoslosRoles() throws Exception {
+        ArrayList<Rols> lst = new ArrayList<Rols>();
         try {
             String sql = "Select * from seguridad.f_obtenertodosroles()";
             ConjuntoResultado crs = AccesoDatos.ejecutaQuery(sql);
@@ -101,12 +102,12 @@ public class FRol {
         return lst;
     }
 
-   public static boolean actualizarRoles(Rol rols) throws Exception {
+   public static boolean actualizarRoles(Rols rols) throws Exception {
         boolean eje = false;
         try {
             ArrayList<Parametro> lstP = new ArrayList<Parametro>();
             String sql = "select * from seguridad.actualizar_rol(?,?);";
-            lstP.add(new Parametro(1, rols.getNombre_rol()));
+            lstP.add(new Parametro(1, rols.getDescripcion_rol()));
             lstP.add(new Parametro(2, rols.getId_rol()));
             ConjuntoResultado rs = AccesoDatos.ejecutaQuery(sql, lstP);
             while (rs.next()) {

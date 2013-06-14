@@ -22,7 +22,8 @@ public class FUsuario {
         ArrayList<Parametro> lstP =new ArrayList<Parametro>();
         lstP.add(new Parametro(1, usr.getId_usuario()));
         lstP.add(new Parametro(2, usr.getNombre_usu()));
-        String sql="select * from seguridad.f_insertar_usuario(?,?)";
+        lstP.add(new Parametro(3, usr.getPassword_usuario()));
+        String sql="select * from seguridad.f_insertar_usuario(?,?,?)";
         try {
             ConjuntoResultado crs =AccesoDatos.ejecutaQuery(sql,lstP);
             band=true;
@@ -54,7 +55,7 @@ public class FUsuario {
         ArrayList<Usuario> lstU=new ArrayList<Usuario>();
         Usuario usr=null;
         try {
-            usr=new Usuario(crs.getString("pcodigo"), crs.getString("pnombre"));
+            usr=new Usuario(crs.getString("pcodigo"), crs.getString("pnombre"), crs.getString("ppassword"));
             lstU.add(usr);
         } catch (Exception e) {
             lstU.clear();
