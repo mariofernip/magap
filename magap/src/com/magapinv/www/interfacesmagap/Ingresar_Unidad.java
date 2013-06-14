@@ -105,39 +105,16 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         BotonGuardarBodega = new javax.swing.JButton();
-        jPanel14 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        txt_modbod = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel36 = new javax.swing.JLabel();
-        txtidbod = new javax.swing.JTextField();
-        txtfecha_mod = new javax.swing.JTextField();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         txtnombreCategoria = new javax.swing.JTextField();
         btnnombreCategoria = new javax.swing.JButton();
-        jPanel15 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         jTabbedPane5 = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         txtnombreRol = new javax.swing.JTextField();
         btnguardarRol = new javax.swing.JButton();
-        jTabbedPane6 = new javax.swing.JTabbedPane();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        txtnombreUnidad = new javax.swing.JTextField();
-        txtubicacionUnidad = new javax.swing.JTextField();
-        txtfuncionUnidad = new javax.swing.JTextField();
-        btnguardarUnidad = new javax.swing.JButton();
-        jPanel17 = new javax.swing.JPanel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -168,9 +145,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         txtTipoMovimiento = new javax.swing.JTextField();
         btnguardarTipoMovimiento = new javax.swing.JButton();
-        jPanel19 = new javax.swing.JPanel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jTable6 = new javax.swing.JTable();
         jTabbedPane12 = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
@@ -199,9 +173,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         txtbced = new javax.swing.JTextField();
         txtbuni = new javax.swing.JTextField();
         btngufunu = new javax.swing.JButton();
-        jPanel20 = new javax.swing.JPanel();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        jTable7 = new javax.swing.JTable();
         jTabbedPane15 = new javax.swing.JTabbedPane();
         jTabbedPane16 = new javax.swing.JTabbedPane();
         jPanel12 = new javax.swing.JPanel();
@@ -210,26 +181,9 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         guarmovimiento = new javax.swing.JButton();
         txttipomov1 = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
-        jPanel18 = new javax.swing.JPanel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTable5 = new javax.swing.JTable();
         jTabbedPane17 = new javax.swing.JTabbedPane();
         jPanel13 = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
-        jPanel16 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        txtmodced = new javax.swing.JTextField();
-        txtmodnombres = new javax.swing.JTextField();
-        txtmodapell = new javax.swing.JTextField();
-        txtmodtelefo = new javax.swing.JTextField();
-        txtmodmail = new javax.swing.JTextField();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        btnact = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -308,80 +262,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Ingresar Nueva Bodega", jTabbedPane8);
 
-        jPanel14.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentHidden(java.awt.event.ComponentEvent evt) {
-                jPanel14ComponentHidden(evt);
-            }
-        });
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTable1MouseClicked(evt);
-            }
-        });
-        jScrollPane2.setViewportView(jTable1);
-
-        jButton1.setText("Modificar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel36.setText("Ubicacion de la bodega");
-
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addComponent(jButton1))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jLabel36)
-                        .addGap(68, 68, 68)
-                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtfecha_mod, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
-                            .addComponent(txtidbod, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
-                            .addComponent(txt_modbod))))
-                .addGap(0, 230, Short.MAX_VALUE))
-        );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 49, Short.MAX_VALUE))
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_modbod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel36))
-                .addGap(18, 18, 18)
-                .addComponent(txtidbod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(txtfecha_mod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jTabbedPane2.addTab("Modificar Bodega", jPanel14);
-
         jTabbedPane1.addTab("Bodega", jTabbedPane2);
 
         jTabbedPane3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -428,36 +308,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane3.addTab("Ingresar Nueva Categoria", jPanel6);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane3.setViewportView(jTable2);
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 625, Short.MAX_VALUE))
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 49, Short.MAX_VALUE))
-        );
-
-        jTabbedPane3.addTab("Modificar categoria", jPanel15);
-
         jTabbedPane1.addTab("Categoria", jTabbedPane3);
 
         jLabel10.setText("Nombre de Rol");
@@ -499,107 +349,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jTabbedPane5.addTab("Ingresar Nuevo Rol", jPanel5);
 
         jTabbedPane1.addTab("Rol", jTabbedPane5);
-
-        jTabbedPane6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTabbedPane6MouseClicked(evt);
-            }
-        });
-
-        jLabel12.setText("Nombre de la Unidad");
-
-        jLabel13.setText("Ubicacion de la Unidad");
-
-        jLabel14.setText("Función de la Unidad");
-
-        txtnombreUnidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnombreUnidadActionPerformed(evt);
-            }
-        });
-
-        btnguardarUnidad.setText("Guardar");
-        btnguardarUnidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnguardarUnidadActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtnombreUnidad)
-                    .addComponent(txtubicacionUnidad)
-                    .addComponent(txtfuncionUnidad, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE))
-                .addGap(414, 414, 414))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnguardarUnidad)
-                .addContainerGap())
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel12)
-                            .addComponent(txtnombreUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel13))
-                    .addComponent(txtubicacionUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtfuncionUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnguardarUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(224, Short.MAX_VALUE))
-        );
-
-        jTabbedPane6.addTab("Ingresar Nueva Unidad", jPanel7);
-
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane5.setViewportView(jTable4);
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 625, Short.MAX_VALUE))
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 49, Short.MAX_VALUE))
-        );
-
-        jTabbedPane6.addTab("Modificar Unidad", jPanel17);
-
-        jTabbedPane1.addTab("Unidad", jTabbedPane6);
 
         jLabel15.setText("Nombre de Estado");
 
@@ -803,36 +552,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         );
 
         jTabbedPane10.addTab("Insertar Nuevo tipo de Movimiento", jPanel1);
-
-        jTable6.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane7.setViewportView(jTable6);
-
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 625, Short.MAX_VALUE))
-        );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 49, Short.MAX_VALUE))
-        );
-
-        jTabbedPane10.addTab("Modificar tipo de movimiento", jPanel19);
 
         jTabbedPane1.addTab("Tipo Movimiento", jTabbedPane10);
 
@@ -1054,36 +773,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane14.addTab("Ingresar", jPanel11);
 
-        jTable7.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane8.setViewportView(jTable7);
-
-        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
-        jPanel20.setLayout(jPanel20Layout);
-        jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 574, Short.MAX_VALUE))
-        );
-        jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 49, Short.MAX_VALUE))
-        );
-
-        jTabbedPane14.addTab("Modificar Funcionario unidad", jPanel20);
-
         jTabbedPane1.addTab("Funcionario Unidad", jTabbedPane14);
 
         jTabbedPane15.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1143,36 +832,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
 
         jTabbedPane15.addTab("Movimiento", jTabbedPane16);
 
-        jTable5.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane6.setViewportView(jTable5);
-
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 625, Short.MAX_VALUE))
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 49, Short.MAX_VALUE))
-        );
-
-        jTabbedPane15.addTab("Modificar movimientos", jPanel18);
-
         jTabbedPane1.addTab("Movimientos", jTabbedPane15);
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -1195,104 +854,6 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 jTabbedPane4MouseClicked(evt);
             }
         });
-
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTable3MouseClicked(evt);
-            }
-        });
-        jScrollPane4.setViewportView(jTable3);
-
-        jLabel37.setText("Cédula");
-
-        jLabel38.setText("Nombres Completos");
-
-        jLabel39.setText("Apellidos Completos");
-
-        jLabel40.setText("Numeros Telefonicos");
-
-        jLabel41.setText("E-mail");
-
-        btnact.setText("Actualizar");
-        btnact.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnactActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel37)
-                            .addComponent(jLabel38)
-                            .addComponent(jLabel39)
-                            .addComponent(jLabel40)
-                            .addComponent(jLabel41))
-                        .addGap(104, 104, 104)
-                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtmodced, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                            .addComponent(txtmodnombres)
-                            .addComponent(txtmodapell)
-                            .addComponent(txtmodtelefo)
-                            .addComponent(txtmodmail)))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(btnact)))
-                .addGap(0, 300, Short.MAX_VALUE))
-        );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 49, Short.MAX_VALUE))
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(txtmodnombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtmodapell, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel37)
-                            .addComponent(txtmodced, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel38)
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel39)
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel40)
-                            .addComponent(txtmodtelefo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel41)
-                            .addComponent(txtmodmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(79, 79, 79)
-                .addComponent(btnact)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jTabbedPane4.addTab("Modificar Funcionario", jPanel16);
 
         jLabel5.setText("Cédula");
 
@@ -1454,21 +1015,6 @@ public void SoloLetras(JTextField stock){
             Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnGuardarEstado_acActionPerformed
-
-    private void btnguardarUnidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarUnidadActionPerformed
-        // TODO add your handling code here:
-        try {
-            Unidad uni = new Unidad(0,txtnombreUnidad.getText(), txtubicacionUnidad.getText(),txtfuncionUnidad.getText());
-            FUnidad.insertarunidad(uni);
-
-        } catch (Exception ex) {
-            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnguardarUnidadActionPerformed
-
-    private void txtnombreUnidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreUnidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtnombreUnidadActionPerformed
 
     private void btnguardarRolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarRolActionPerformed
         try {
@@ -1673,44 +1219,6 @@ public void SoloLetras(JTextField stock){
         }
     }//GEN-LAST:event_guarmovimientoActionPerformed
 
-    private void BotonGuardarBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarBodegaActionPerformed
-
-        try {
-
-            String fechaBodega = new SimpleDateFormat("yyyy-MM-dd").format(FechaBodega.getDate());
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-            Date dateStr = formatter.parse(fechaBodega);
-
-            java.sql.Date sqlDate = new java.sql.Date(dateStr.getTime());
-
-            try {
-                Bodega funu = new Bodega(txtUbicacionBodega.getText(),sqlDate);
-                FBodega.insertarbodega(funu);
-                JOptionPane.showMessageDialog(null, "Elemento Bodega Guardado exitosamente");
-            }
-            catch (Exception ex) {
-                Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        catch (ParseException ex) {
-            Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_BotonGuardarBodegaActionPerformed
-
-    private void jPanel14ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel14ComponentHidden
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel14ComponentHidden
-
-    private void jTabbedPane2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane2MouseClicked
-        // TODO add your handling code here:
-        FBodega bod=new FBodega();
-        try {
-            bod.llenarTabla(jTable1);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, e.getMessage());
-        }
-    }//GEN-LAST:event_jTabbedPane2MouseClicked
-
     private void jTabbedPane3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane3MouseClicked
         // TODO add your handling code here:
         FCategoria cat=new FCategoria();
@@ -1730,16 +1238,6 @@ public void SoloLetras(JTextField stock){
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
     }//GEN-LAST:event_jTabbedPane4MouseClicked
-
-    private void jTabbedPane6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane6MouseClicked
-        // TODO add your handling code here:
-        FUnidad bod=new FUnidad();
-        try {
-            bod.llenarTabla();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, e.getMessage());
-        }
-    }//GEN-LAST:event_jTabbedPane6MouseClicked
 
     private void jTabbedPane15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane15MouseClicked
         // TODO add your handling code here:
@@ -1771,44 +1269,39 @@ public void SoloLetras(JTextField stock){
         }
     }//GEN-LAST:event_jTabbedPane14MouseClicked
 
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+    private void jTabbedPane2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane2MouseClicked
         // TODO add your handling code here:
-        int fila = jTable1.rowAtPoint(evt.getPoint());
-        txt_modbod.setText(jTable1.getValueAt(fila,1).toString());
-        txtidbod.setText(jTable1.getValueAt(fila,0).toString());
-        txtfecha_mod.setText(jTable1.getValueAt(fila,2).toString());
-    }//GEN-LAST:event_jTable1MouseClicked
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        FBodega bod=new FBodega();
         try {
-         Bodega bod = new Bodega(txtidbod.getText(),txtfecha_mod.getText(),txt_modbod.getText());
-         FBodega.actualizarbodega(bod);
-        } catch (Exception ex) {
-            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+            bod.llenarTabla(jTable1);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jTabbedPane2MouseClicked
 
-    private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
-        int fila = jTable3.rowAtPoint(evt.getPoint());
-        txtmodced.setText(jtable3.getValueAt(fila,0).toString());
-        txtmodnombres.setText(jTable3.getValueAt(fila,1).toString());
-        txtmodapell.setText(jTable3.getValueAt(fila,2).toString());
-        txtmodtelefo.setText(jTable3.getValueAt(fila,3).toString());
-        txtmodmail.setText(jTable3.getValueAt(fila,4).toString());
-    }//GEN-LAST:event_jTable3MouseClicked
+    private void BotonGuardarBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarBodegaActionPerformed
 
-    private void btnactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnactActionPerformed
-        // TODO add your handling code here:
         try {
-            Funcionario fun = new Funcionario(txtmodced.getText(), txtnombresFuncionario.getText(), txtapellidosFuncionario.getText(),
-                txttelefonoFuncionario.getText(), txtemailFuncionario.getText());
-            FFuncionario.insertarfuncionario(fun);
 
-        } catch (Exception ex) {
-            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+            String fechaBodega = new SimpleDateFormat("yyyy-MM-dd").format(FechaBodega.getDate());
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            Date dateStr = formatter.parse(fechaBodega);
+
+            java.sql.Date sqlDate = new java.sql.Date(dateStr.getTime());
+
+            try {
+                Bodega funu = new Bodega(txtUbicacionBodega.getText(),sqlDate);
+                FBodega.insertarbodega(funu);
+                JOptionPane.showMessageDialog(null, "Elemento Bodega Guardado exitosamente");
+            }
+            catch (Exception ex) {
+                Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
-    }                             
-    }//GEN-LAST:event_btnactActionPerformed
+        catch (ParseException ex) {
+            Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_BotonGuardarBodegaActionPerformed
 
             
             
@@ -1865,7 +1358,6 @@ public void SoloLetras(JTextField stock){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonGuardarBodega;
     private javax.swing.JButton btnGuardarEstado_ac;
-    private javax.swing.JButton btnact;
     private javax.swing.JButton btncargarFuncionarioRolBodega;
     private javax.swing.JButton btncargarNombreFuncionario;
     private javax.swing.JButton btnguadarFuncionario;
@@ -1874,7 +1366,6 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JButton btnguardarInventario;
     private javax.swing.JButton btnguardarRol;
     private javax.swing.JButton btnguardarTipoMovimiento;
-    private javax.swing.JButton btnguardarUnidad;
     private javax.swing.JButton btngufunu;
     private javax.swing.JButton btnnombreCategoria;
     private javax.swing.JComboBox cmbbodegaInventario;
@@ -1883,13 +1374,9 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JComboBox cmbestadoInventario;
     private javax.swing.JComboBox cmbrolFuncionario;
     private javax.swing.JButton guarmovimiento;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -1913,13 +1400,7 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1934,29 +1415,14 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane10;
     private javax.swing.JTabbedPane jTabbedPane11;
@@ -1970,21 +1436,12 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTabbedPane jTabbedPane6;
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTabbedPane jTabbedPane8;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JTable jTable5;
-    private javax.swing.JTable jTable6;
-    private javax.swing.JTable jTable7;
     private javax.swing.JLabel lblfuncionaroBodega;
     private javax.swing.JTextField txtEstado_ac;
     private javax.swing.JTextField txtTipoMovimiento;
     private javax.swing.JTextField txtUbicacionBodega;
-    private javax.swing.JTextField txt_modbod;
     private javax.swing.JTextArea txtadescripcionInventario;
     private javax.swing.JTextField txtapellidosFuncionario;
     private javax.swing.JTextField txtbced;
@@ -1994,25 +1451,15 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTextField txtcedulafuncionarioRolBodega;
     private javax.swing.JTextField txtdescmovi;
     private javax.swing.JTextField txtemailFuncionario;
-    private javax.swing.JTextField txtfecha_mod;
-    private javax.swing.JTextField txtfuncionUnidad;
-    private javax.swing.JTextField txtidbod;
     private javax.swing.JTextField txtidentificadorInventario;
     private javax.swing.JTextField txtmarcaInventario;
-    private javax.swing.JTextField txtmodapell;
-    private javax.swing.JTextField txtmodced;
     private javax.swing.JTextField txtmodeloInventario;
-    private javax.swing.JTextField txtmodmail;
-    private javax.swing.JTextField txtmodnombres;
-    private javax.swing.JTextField txtmodtelefo;
     private javax.swing.JTextField txtnombreCategoria;
     private javax.swing.JTextField txtnombreFuncionario;
     private javax.swing.JTextField txtnombreRol;
-    private javax.swing.JTextField txtnombreUnidad;
     private javax.swing.JTextField txtnombresFuncionario;
     private javax.swing.JTextField txtstock;
     private javax.swing.JTextField txttelefonoFuncionario;
     private javax.swing.JTextField txttipomov1;
-    private javax.swing.JTextField txtubicacionUnidad;
     // End of variables declaration//GEN-END:variables
 }
