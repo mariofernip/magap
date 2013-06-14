@@ -108,5 +108,25 @@ public class FUnidad {
             dtm.addRow(datos.get(i));
         }
     }
+    public static int actualizarunidad (Unidad uni) throws Exception{
+    int codigo=-1;
+    ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
+    String sql ="Select * from bodega.act_unidad(?,?,?)";
+    lstpar.add(new Parametro(1,uni.getUbicacion_unidad()));
+    lstpar.add(new Parametro(2,uni.getNombre_unidad()));
+    lstpar.add(new Parametro(3,uni.getFuncion_unidad()));
+     
+        try {
+            ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
+            //band=AccesoDatos.ejecutaComando(sql, lstpar);
+            while (cres.next()){
+                codigo=cres.getInt(0);
+            }
+        } catch (Exception ex) {
+           throw new Exception("Error al actualizar una Categoria"+ex.getMessage());
+        }
+    
+    return codigo;
+    }
 }
 

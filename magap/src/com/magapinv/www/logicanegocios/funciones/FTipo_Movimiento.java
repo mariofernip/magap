@@ -107,5 +107,23 @@ public class FTipo_Movimiento {
             dtm.addRow(datos.get(i));
         }
     }
+    public static int actualizartipo_mov (Tipo_Movimiento t_movi) throws Exception{
+    int codigo=-1;
+    ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
+    String sql ="Select * from bodega.act_tipo_mov(?)";
+    lstpar.add(new Parametro(1,t_movi.getTipomovimiento()));
+     
+        try {
+            ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
+            //band=AccesoDatos.ejecutaComando(sql, lstpar);
+            while (cres.next()){
+                codigo=cres.getInt(0);
+            }
+        } catch (Exception ex) {
+           throw new Exception("Error al insertar un tipo de Inventario"+ex.getMessage());
+        }
+    
+    return codigo;
+    }
 }
 

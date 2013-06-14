@@ -111,6 +111,27 @@ public class FFuncionario {
             dtm.addRow(datos.get(i));
         }
     }
+    public static int actualizarfuncionario (Funcionario fun) throws Exception{
+    int codigo=-1;
+    ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
+    String sql ="Select * from bodega.act_funcionario(?,?,?,?,?)";
+    lstpar.add(new Parametro(1,fun.getCedula()));
+    lstpar.add(new Parametro(2,fun.getNombres()));
+    lstpar.add(new Parametro(3,fun.getApellidos()));
+    lstpar.add(new Parametro(4,fun.getNumerostelefonicos()));
+    lstpar.add(new Parametro(5,fun.getCorreo()));
+        try {
+            ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
+            //band=AccesoDatos.ejecutaComando(sql, lstpar);
+            while (cres.next()){
+                codigo=cres.getInt(0);
+            }
+        } catch (Exception ex) {
+           throw new Exception("Error al insertar un Funcionario"+ex.getMessage());
+        }
+    
+    return codigo;
+    }
 }
     
 

@@ -126,5 +126,22 @@ public class FBodega {
             dtm.addRow(datos.get(i));
         }
     }
+    public static boolean actualizarbodega(Bodega bod) throws Exception{
+    boolean codigo=false;
+    ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
+    String sql ="Select * from bodega.act_bodega(?,?)";
+    lstpar.add(new Parametro(1,bod.getUbicacion()));
+    lstpar.add(new Parametro(2,bod.getFecha_creacion()));
+    try {
+            ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
+            //band=AccesoDatos.ejecutaComando(sql, lstpar);
+            while (cres.next()){
+                codigo=cres.getBoolean(0);
+            }
+        } catch (Exception ex) {
+           throw new Exception("Error al actulizar una nueva bodega"+ex.getMessage());
+        }
+        return codigo;
+    }
            
 }

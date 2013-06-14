@@ -109,5 +109,24 @@ public class FFuncionario_Unidad {
             dtm.addRow(datos.get(i));
         }
     }
+    public static int act_funcionario_unidad (Funcionario_Unidad fun_u) throws Exception{
+    int codigo=-1;
+    ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
+    String sql ="Select * from bodega.act_func_unidad(?,?)";
+    lstpar.add(new Parametro(1,fun_u.getCedula_funcionario()));
+    lstpar.add(new Parametro(2,fun_u.getId_unidad()));
+    
+        try {
+            ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
+            //band=AccesoDatos.ejecutaComando(sql, lstpar);
+            while (cres.next()){
+                codigo=cres.getInt(0);
+            }
+        } catch (Exception ex) {
+           throw new Exception("Error al actualizar un funcionario a una unidad"+ex.getMessage());
+        }
+    
+    return codigo;
+    }
 }
 

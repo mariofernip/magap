@@ -125,5 +125,22 @@ public class FCategoria {
             dtm.addRow(datos.get(i));
         }
     }
+      public static int actualizarCategorias (Categoria cat) throws Exception{
+    int codigo=-1;
+    ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
+    String sql ="Select * from bodega.act_categoria(?)";
+    lstpar.add(new Parametro(1,cat.getNombre_categoria()));
+        try {
+            ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
+            //band=AccesoDatos.ejecutaComando(sql, lstpar);
+            while (cres.next()){
+                codigo=cres.getInt(0);
+            }
+        } catch (Exception ex) {
+           throw new Exception("Error al actualizar una Categoria"+ex.getMessage());
+        }
+    
+    return codigo;
+    }
             
 }

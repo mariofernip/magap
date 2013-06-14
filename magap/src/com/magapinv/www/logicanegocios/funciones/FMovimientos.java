@@ -107,4 +107,22 @@ public class FMovimientos {
             dtm.addRow(datos.get(i));
         }
     }
+     public static int actualizarmovimientos (Movimientos movi) throws Exception{
+    int codigo=-1;
+    ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
+    String sql ="Select * from bodega.act_movimientos(?)";
+    lstpar.add(new Parametro(1,movi.getObservacion()));
+     
+        try {
+            ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
+            //band=AccesoDatos.ejecutaComando(sql, lstpar);
+            while (cres.next()){
+                codigo=cres.getInt(0);
+            }
+        } catch (Exception ex) {
+           throw new Exception("Error al actualizar un movimiento"+ex.getMessage());
+        }
+    
+    return codigo;
+    }
 }
