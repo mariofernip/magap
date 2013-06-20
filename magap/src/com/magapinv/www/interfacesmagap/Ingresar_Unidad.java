@@ -105,6 +105,15 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         BotonGuardarBodega = new javax.swing.JButton();
+        jPanel7 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tab_bodega = new javax.swing.JTable();
+        text_id = new javax.swing.JTextField();
+        txt_ubi = new javax.swing.JTextField();
+        text_fecha = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        btn_mod_bodega = new javax.swing.JButton();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
@@ -255,12 +264,96 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(48, 48, 48)
                 .addComponent(BotonGuardarBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(256, Short.MAX_VALUE))
+                .addContainerGap(286, Short.MAX_VALUE))
         );
 
         jTabbedPane8.addTab("Datos Bodega", jPanel3);
 
         jTabbedPane2.addTab("Ingresar Nueva Bodega", jTabbedPane8);
+
+        tab_bodega.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "id_bodega", "ubicacion", "fecha de creacion"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tab_bodega.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tab_bodegaMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(tab_bodega);
+
+        text_id.setEditable(false);
+        text_id.setEnabled(false);
+
+        text_fecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_fechaActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setText("Modificar la ubicacion ");
+
+        jLabel14.setText("Fecha de creacion");
+
+        btn_mod_bodega.setText("Modificar");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(text_id, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_ubi))
+                            .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(73, 73, 73)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel13)))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(btn_mod_bodega)))
+                .addGap(0, 247, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 79, Short.MAX_VALUE))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(text_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_ubi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
+                .addGap(48, 48, 48)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14))
+                .addGap(83, 83, 83)
+                .addComponent(btn_mod_bodega)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Modificar bodega", jPanel7);
 
         jTabbedPane1.addTab("Bodega", jTabbedPane2);
 
@@ -303,7 +396,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(txtnombreCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(65, 65, 65)
                 .addComponent(btnnombreCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(280, Short.MAX_VALUE))
+                .addContainerGap(310, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Ingresar Nueva Categoria", jPanel6);
@@ -343,7 +436,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(txtnombreRol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnguardarRol, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(343, Short.MAX_VALUE))
+                .addContainerGap(373, Short.MAX_VALUE))
         );
 
         jTabbedPane5.addTab("Ingresar Nuevo Rol", jPanel5);
@@ -383,7 +476,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(txtEstado_ac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnGuardarEstado_ac, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(333, Short.MAX_VALUE))
+                .addContainerGap(363, Short.MAX_VALUE))
         );
 
         jTabbedPane7.addTab("Ingresar Nuevo Estado de Inventario", jPanel8);
@@ -500,7 +593,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                         .addComponent(txtstock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(19, 19, 19)
                 .addComponent(btnguardarInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(206, Short.MAX_VALUE))
         );
 
         jTabbedPane11.addTab("Insertar nuevo articulo de inventario", jPanel2);
@@ -548,7 +641,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(txtTipoMovimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68)
                 .addComponent(btnguardarTipoMovimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(313, Short.MAX_VALUE))
         );
 
         jTabbedPane10.addTab("Insertar Nuevo tipo de Movimiento", jPanel1);
@@ -634,7 +727,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                         .addGap(46, 46, 46)))
                 .addGap(16, 16, 16)
                 .addComponent(btnguardarFuncionarioRol, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addContainerGap(209, Short.MAX_VALUE))
         );
 
         jTabbedPane12.addTab("Ingresar Funcionario Rol", jPanel9);
@@ -708,7 +801,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addComponent(jLabel30)
                 .addGap(14, 14, 14)
                 .addComponent(btnguardarFuncionarioRolBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(241, Short.MAX_VALUE))
+                .addContainerGap(271, Short.MAX_VALUE))
         );
 
         jTabbedPane13.addTab("Ingresar Funcionario Rol Bodega", jPanel10);
@@ -768,7 +861,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                         .addComponent(txtbuni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(133, 133, 133)
                 .addComponent(btngufunu)
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
 
         jTabbedPane14.addTab("Ingresar", jPanel11);
@@ -823,7 +916,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel35)
                     .addComponent(txttipomov1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                 .addComponent(guarmovimiento)
                 .addGap(128, 128, 128))
         );
@@ -842,7 +935,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 476, Short.MAX_VALUE)
+            .addGap(0, 506, Short.MAX_VALUE)
         );
 
         jTabbedPane17.addTab("Ingresar", jPanel13);
@@ -934,7 +1027,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(txtemailFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnguadarFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(187, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("Ingresar Nuevo Funcionario", jPanel4);
@@ -976,9 +1069,9 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addComponent(jLabel2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
@@ -1273,7 +1366,7 @@ public void SoloLetras(JTextField stock){
         // TODO add your handling code here:
         FBodega bod=new FBodega();
         try {
-            bod.llenarTabla(jTable1);
+            bod.llenarTabla(tab_bodega);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
@@ -1302,6 +1395,18 @@ public void SoloLetras(JTextField stock){
             Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_BotonGuardarBodegaActionPerformed
+
+    private void text_fechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_fechaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_fechaActionPerformed
+
+    private void tab_bodegaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_bodegaMouseClicked
+        // TODO add your handling code here:
+        int fila = tab_bodega.rowAtPoint(evt.getPoint());
+        text_id.setText(tab_bodega.getValueAt(fila,1).toString());
+        txt_ubi.setText(tab_bodega.getValueAt(fila,0).toString());
+        text_fecha.setText(tab_bodega.getValueAt(fila,2).toString());
+    }//GEN-LAST:event_tab_bodegaMouseClicked
 
             
             
@@ -1358,6 +1463,7 @@ public void SoloLetras(JTextField stock){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonGuardarBodega;
     private javax.swing.JButton btnGuardarEstado_ac;
+    private javax.swing.JButton btn_mod_bodega;
     private javax.swing.JButton btncargarFuncionarioRolBodega;
     private javax.swing.JButton btncargarNombreFuncionario;
     private javax.swing.JButton btnguadarFuncionario;
@@ -1377,6 +1483,8 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -1420,9 +1528,11 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane10;
     private javax.swing.JTabbedPane jTabbedPane11;
@@ -1439,9 +1549,13 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTabbedPane jTabbedPane8;
     private javax.swing.JLabel lblfuncionaroBodega;
+    private javax.swing.JTable tab_bodega;
+    private javax.swing.JTextField text_fecha;
+    private javax.swing.JTextField text_id;
     private javax.swing.JTextField txtEstado_ac;
     private javax.swing.JTextField txtTipoMovimiento;
     private javax.swing.JTextField txtUbicacionBodega;
+    private javax.swing.JTextField txt_ubi;
     private javax.swing.JTextArea txtadescripcionInventario;
     private javax.swing.JTextField txtapellidosFuncionario;
     private javax.swing.JTextField txtbced;
