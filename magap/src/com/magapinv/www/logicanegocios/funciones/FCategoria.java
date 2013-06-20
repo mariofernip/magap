@@ -128,8 +128,9 @@ public class FCategoria {
       public static int actualizarCategorias (Categoria cat) throws Exception{
     int codigo=-1;
     ArrayList<Parametro> lstpar= new ArrayList<Parametro>();
-    String sql ="Select * from bodega.act_categoria(?)";
-    lstpar.add(new Parametro(1,cat.getNombre_categoria()));
+    String sql ="Select * from bodega.act_categoria(?,?)";
+    lstpar.add(new Parametro(1,cat.getId_categoria()));
+    lstpar.add(new Parametro(2,cat.getNombre_categoria()));
         try {
             ConjuntoResultado cres = AccesoDatos.ejecutaQuery(sql,lstpar);
             //band=AccesoDatos.ejecutaComando(sql, lstpar);
