@@ -162,6 +162,14 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         txtTipoMovimiento = new javax.swing.JTextField();
         btnguardarTipoMovimiento = new javax.swing.JButton();
+        jPanel16 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tab_tipo_mov = new javax.swing.JTable();
+        text_idtip = new javax.swing.JTextField();
+        text_tipmov = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        btn_mod_tipmovi = new javax.swing.JButton();
         jTabbedPane12 = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
@@ -190,6 +198,9 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         txtbced = new javax.swing.JTextField();
         txtbuni = new javax.swing.JTextField();
         btngufunu = new javax.swing.JButton();
+        jPanel15 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tab_funu = new javax.swing.JTable();
         jTabbedPane15 = new javax.swing.JTabbedPane();
         jTabbedPane16 = new javax.swing.JTabbedPane();
         jPanel12 = new javax.swing.JPanel();
@@ -213,6 +224,20 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         txtapellidosFuncionario = new javax.swing.JTextField();
         txttelefonoFuncionario = new javax.swing.JTextField();
         txtemailFuncionario = new javax.swing.JTextField();
+        jPanel17 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        tab_funcionario = new javax.swing.JTable();
+        txt_modced = new javax.swing.JTextField();
+        txt_mod_nomb = new javax.swing.JTextField();
+        txt_mod_ape = new javax.swing.JTextField();
+        txt_modtel = new javax.swing.JTextField();
+        txt_modmail = new javax.swing.JTextField();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        btn_mod_fun = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -272,7 +297,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(48, 48, 48)
                 .addComponent(BotonGuardarBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(304, Short.MAX_VALUE))
+                .addContainerGap(307, Short.MAX_VALUE))
         );
 
         jTabbedPane8.addTab("Datos Bodega", jPanel3);
@@ -344,7 +369,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 97, Short.MAX_VALUE))
+                .addGap(0, 100, Short.MAX_VALUE))
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(text_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -404,7 +429,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(txtnombreCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(65, 65, 65)
                 .addComponent(btnnombreCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(328, Short.MAX_VALUE))
+                .addContainerGap(331, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Ingresar Nueva Categoria", jPanel6);
@@ -471,7 +496,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 97, Short.MAX_VALUE))
+                .addGap(0, 100, Short.MAX_VALUE))
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -523,7 +548,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(txtnombreRol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnguardarRol, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(391, Short.MAX_VALUE))
+                .addContainerGap(394, Short.MAX_VALUE))
         );
 
         jTabbedPane5.addTab("Ingresar Nuevo Rol", jPanel5);
@@ -563,7 +588,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(txtEstado_ac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnGuardarEstado_ac, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(381, Short.MAX_VALUE))
+                .addContainerGap(384, Short.MAX_VALUE))
         );
 
         jTabbedPane7.addTab("Ingresar Nuevo Estado de Inventario", jPanel8);
@@ -680,7 +705,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                         .addComponent(txtstock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(19, 19, 19)
                 .addComponent(btnguardarInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(224, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
 
         jTabbedPane11.addTab("Insertar nuevo articulo de inventario", jPanel2);
@@ -728,10 +753,93 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                     .addComponent(txtTipoMovimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68)
                 .addComponent(btnguardarTipoMovimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(331, Short.MAX_VALUE))
+                .addContainerGap(334, Short.MAX_VALUE))
         );
 
         jTabbedPane10.addTab("Insertar Nuevo tipo de Movimiento", jPanel1);
+
+        tab_tipo_mov.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Identificador", "tipo"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tab_tipo_mov.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tab_tipo_movMouseClicked(evt);
+            }
+        });
+        jScrollPane5.setViewportView(tab_tipo_mov);
+
+        text_idtip.setEditable(false);
+
+        jLabel37.setText("Identificador");
+
+        jLabel38.setText("Tipo de movimiento");
+
+        btn_mod_tipmovi.setText("Modificar ");
+        btn_mod_tipmovi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_mod_tipmoviActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(86, 86, 86)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel16Layout.createSequentialGroup()
+                            .addComponent(text_idtip, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(46, 46, 46)
+                            .addComponent(jLabel37))
+                        .addGroup(jPanel16Layout.createSequentialGroup()
+                            .addComponent(text_tipmov, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(51, 51, 51)
+                            .addComponent(jLabel38)))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addComponent(btn_mod_tipmovi)
+                        .addGap(143, 143, 143)))
+                .addGap(0, 317, Short.MAX_VALUE))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 100, Short.MAX_VALUE))
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel38)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(text_idtip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel37))
+                        .addGap(27, 27, 27)
+                        .addComponent(text_tipmov, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(73, 73, 73)
+                .addComponent(btn_mod_tipmovi)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane10.addTab("Modificar tipo de movimiento", jPanel16);
 
         jTabbedPane1.addTab("Tipo Movimiento", jTabbedPane10);
 
@@ -814,7 +922,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                         .addGap(46, 46, 46)))
                 .addGap(16, 16, 16)
                 .addComponent(btnguardarFuncionarioRol, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addContainerGap(230, Short.MAX_VALUE))
         );
 
         jTabbedPane12.addTab("Ingresar Funcionario Rol", jPanel9);
@@ -888,7 +996,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addComponent(jLabel30)
                 .addGap(14, 14, 14)
                 .addComponent(btnguardarFuncionarioRolBodega, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(289, Short.MAX_VALUE))
+                .addContainerGap(292, Short.MAX_VALUE))
         );
 
         jTabbedPane13.addTab("Ingresar Funcionario Rol Bodega", jPanel10);
@@ -948,10 +1056,40 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                         .addComponent(txtbuni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(133, 133, 133)
                 .addComponent(btngufunu)
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addContainerGap(258, Short.MAX_VALUE))
         );
 
         jTabbedPane14.addTab("Ingresar", jPanel11);
+
+        tab_funu.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Cedula Funcionario", "identificardor unidad"
+            }
+        ));
+        jScrollPane4.setViewportView(tab_funu);
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 625, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 100, Short.MAX_VALUE))
+        );
+
+        jTabbedPane14.addTab("Modificar", jPanel15);
 
         jTabbedPane1.addTab("Funcionario Unidad", jTabbedPane14);
 
@@ -1003,7 +1141,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel35)
                     .addComponent(txttipomov1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
                 .addComponent(guarmovimiento)
                 .addGap(128, 128, 128))
         );
@@ -1022,7 +1160,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 524, Short.MAX_VALUE)
+            .addGap(0, 527, Short.MAX_VALUE)
         );
 
         jTabbedPane17.addTab("Ingresar", jPanel13);
@@ -1087,7 +1225,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnguadarFuncionario)
-                .addContainerGap())
+                .addGap(365, 365, 365))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1112,12 +1250,116 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(txtemailFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnguadarFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(205, Short.MAX_VALUE))
+                .addContainerGap(220, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("Ingresar Nuevo Funcionario", jPanel4);
+
+        tab_funcionario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Numero de cedula", "Nombres", "Apellidos", "Telefonos", "e_mail"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tab_funcionario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tab_funcionarioMouseClicked(evt);
+            }
+        });
+        jScrollPane6.setViewportView(tab_funcionario);
+
+        jLabel39.setText("Numero de cedula");
+
+        jLabel40.setText("Nombres");
+
+        jLabel41.setText("Apellidos");
+
+        jLabel42.setText("E-mail");
+
+        jLabel43.setText("Telefonos");
+
+        btn_mod_fun.setText("Modificar");
+        btn_mod_fun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_mod_funActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_modced, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                            .addComponent(txt_mod_nomb)
+                            .addComponent(txt_mod_ape)
+                            .addComponent(txt_modtel)
+                            .addComponent(txt_modmail))
+                        .addGap(71, 71, 71)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel39)
+                            .addComponent(jLabel40)
+                            .addComponent(jLabel42)
+                            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel43)
+                                .addComponent(jLabel41))))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addComponent(btn_mod_fun)
+                        .addGap(58, 58, 58)))
+                .addGap(0, 347, Short.MAX_VALUE))
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 100, Short.MAX_VALUE))
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel39)
+                    .addComponent(txt_modced, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(txt_mod_nomb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel41)
+                    .addComponent(txt_mod_ape, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel43)
+                    .addComponent(txt_modtel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_modmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel42))
+                .addGap(48, 48, 48)
+                .addComponent(btn_mod_fun)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane4.addTab("Modificar", jPanel17);
 
         jTabbedPane1.addTab("Funcionario", jTabbedPane4);
 
@@ -1158,7 +1400,7 @@ public class Ingresar_Unidad extends javax.swing.JFrame {
                         .addComponent(jLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -1195,16 +1437,6 @@ public void SoloLetras(JTextField stock){
             Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnGuardarEstado_acActionPerformed
-
-    private void btnguardarRolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarRolActionPerformed
-        try {
-            Rol rol = new Rol(txtnombreRol.getText());
-            FRol.insertarRol(rol);
-
-        } catch (Exception ex) {
-            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnguardarRolActionPerformed
 
     private void txtemailFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtemailFuncionarioActionPerformed
         // TODO add your handling code here:
@@ -1413,7 +1645,7 @@ public void SoloLetras(JTextField stock){
         // TODO add your handling code here:
         FFuncionario fun=new FFuncionario();
         try {
-            fun.llenarTabla();
+            fun.llenarTabla(tab_funcionario);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
@@ -1433,7 +1665,7 @@ public void SoloLetras(JTextField stock){
         // TODO add your handling code here:
         FTipo_Movimiento bod=new FTipo_Movimiento();
         try {
-            bod.llenarTabla();
+            bod.llenarTabla(tab_tipo_mov);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
@@ -1514,6 +1746,55 @@ public void SoloLetras(JTextField stock){
         }
     }//GEN-LAST:event_btn_modificar_catActionPerformed
 
+    private void btnguardarRolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarRolActionPerformed
+        try {
+            Rol rol = new Rol(txtnombreRol.getText());
+            FRol.insertarRol(rol);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Ingresar_Inventario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnguardarRolActionPerformed
+
+    private void tab_tipo_movMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_tipo_movMouseClicked
+        // TODO add your handling code here:
+        int fila =tab_tipo_mov.rowAtPoint(evt.getPoint());
+        text_idtip.setText(tab_tipo_mov.getValueAt(fila,0).toString());
+        text_tipmov.setText(tab_tipo_mov.getValueAt(fila,1).toString());
+    }//GEN-LAST:event_tab_tipo_movMouseClicked
+
+    private void btn_mod_tipmoviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mod_tipmoviActionPerformed
+        // TODO add your handling code here:
+        Tipo_Movimiento tipm=new Tipo_Movimiento(Integer.parseInt(text_idtip.getText()),text_tipmov.getText());
+        FTipo_Movimiento tipm1=new FTipo_Movimiento();
+        try {
+        tipm1.actualizartipo_mov(tipm);
+        } catch (Exception ex) {
+            Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btn_mod_tipmoviActionPerformed
+
+    private void tab_funcionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_funcionarioMouseClicked
+        // TODO add your handling code here:
+        int fila = tab_funcionario.rowAtPoint(evt.getPoint());
+        txt_modced.setText(tab_funcionario.getValueAt(fila,0).toString());
+        txt_mod_nomb.setText(tab_funcionario.getValueAt(fila,1).toString());
+        txt_mod_ape.setText(tab_funcionario.getValueAt(fila,2).toString());
+        txt_modtel.setText(tab_funcionario.getValueAt(fila,3).toString());
+        txt_modmail.setText(tab_funcionario.getValueAt(fila,4).toString());
+    }//GEN-LAST:event_tab_funcionarioMouseClicked
+
+    private void btn_mod_funActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mod_funActionPerformed
+        // TODO add your handling code here:
+        Funcionario func= new Funcionario(txt_modced.getText(),txt_mod_nomb.getText(),txt_mod_ape.getText(),txt_modtel.getText(), txt_modmail.getText());
+        FFuncionario fun1=new FFuncionario();
+        try {
+        fun1.actualizarfuncionario(func);
+        } catch (Exception ex) {
+            Logger.getLogger(Ingresar_Unidad.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btn_mod_funActionPerformed
+
             
             
     public Date DeStringADate(String fecha){
@@ -1570,6 +1851,8 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JButton BotonGuardarBodega;
     private javax.swing.JButton btnGuardarEstado_ac;
     private javax.swing.JButton btn_mod_bodega;
+    private javax.swing.JButton btn_mod_fun;
+    private javax.swing.JButton btn_mod_tipmovi;
     private javax.swing.JButton btn_modificar_cat;
     private javax.swing.JButton btncargarFuncionarioRolBodega;
     private javax.swing.JButton btncargarNombreFuncionario;
@@ -1617,7 +1900,14 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1633,6 +1923,9 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1644,6 +1937,9 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane10;
     private javax.swing.JTabbedPane jTabbedPane11;
@@ -1662,13 +1958,23 @@ public void SoloLetras(JTextField stock){
     private javax.swing.JLabel lblfuncionaroBodega;
     private javax.swing.JTable tab_bodega;
     private javax.swing.JTable tab_categoria;
+    private javax.swing.JTable tab_funcionario;
+    private javax.swing.JTable tab_funu;
+    private javax.swing.JTable tab_tipo_mov;
     private javax.swing.JTextField text_fecha;
     private javax.swing.JTextField text_id;
     private javax.swing.JTextField text_idcat;
+    private javax.swing.JTextField text_idtip;
     private javax.swing.JTextField text_nomb_cat;
+    private javax.swing.JTextField text_tipmov;
     private javax.swing.JTextField txtEstado_ac;
     private javax.swing.JTextField txtTipoMovimiento;
     private javax.swing.JTextField txtUbicacionBodega;
+    private javax.swing.JTextField txt_mod_ape;
+    private javax.swing.JTextField txt_mod_nomb;
+    private javax.swing.JTextField txt_modced;
+    private javax.swing.JTextField txt_modmail;
+    private javax.swing.JTextField txt_modtel;
     private javax.swing.JTextField txt_ubi;
     private javax.swing.JTextArea txtadescripcionInventario;
     private javax.swing.JTextField txtapellidosFuncionario;
