@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3e68722c-69ab-4ce7-a565-2cdb69a577b2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="32"/>
+	<parameter name="cedula" class="java.lang.String"/>
+	<parameter name="fechain" class="java.util.Date"/>
+	<parameter name="fechafin" class="java.util.Date"/>
+	<parameter name="logo_izq" class="java.io.InputStream"/>
+	<parameter name="logo_der" class="java.io.InputStream"/>
+	<parameter name="nombre_bodega" class="java.lang.String"/>
+	<parameter name="nombre_recibe" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="cargo_funcionario_mensual" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT id_mov
+FROM bodega.movimientos where id_mov=98]]>
+	</queryString>
+	<field name="id_mov" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="93" splitType="Stretch">
+			<image>
+				<reportElement uuid="56f45ab1-014b-41d1-b257-8815192408f1" x="0" y="0" width="155" height="72"/>
+				<imageExpression><![CDATA[$P{logo_izq}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="78284c04-5de3-4782-bd78-f615f01d673b" x="405" y="0" width="150" height="72"/>
+				<imageExpression><![CDATA[$P{logo_der}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="58042734-8fbe-417c-a5fa-7658f1771ca9" x="155" y="29" width="250" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISTRITO CENTRO ORIENTE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="130" splitType="Stretch">
+			<textField>
+				<reportElement uuid="941abb51-487d-47da-a7f5-9955a6619469" x="208" y="89" width="337" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{nombre_recibe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e457f3a4-84f6-4fed-aba5-d07cdf7fa7b2" x="0" y="89" width="208" height="20"/>
+				<textElement/>
+				<text><![CDATA[por una parte, quien entrega, por otra parte ]]></text>
+			</staticText>
+			<textField pattern="h.mm.ss a">
+				<reportElement uuid="deaa29d2-3e78-4d07-839a-454cfcb28497" x="224" y="69" width="79" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="3dbcc69b-e884-420c-b158-eb3c8282037d" x="0" y="109" width="545" height="20"/>
+				<textElement/>
+				<text><![CDATA[quien ha recibido Conforme lo solicitado, lo detallado a continuación.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="81e4a785-ee21-444f-9851-04a1ce039726" x="303" y="69" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[el/la suscrita Ing.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="82c50ab0-df6b-478c-8212-6e33ad3e207f" x="378" y="69" width="167" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{nombre_bodega}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="677974be-1da6-4c25-8383-3072ab96cfb2" x="0" y="53" width="545" height="16"/>
+				<textElement/>
+				<text><![CDATA[En las instalaciones de la Subsecretaría y Reforma Agraria Distrito Centro Oriente Riobamba, entre las fechas,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e4dd56c3-6299-4c0b-bfb8-54c4801eb79e" x="169" y="69" width="55" height="20"/>
+				<textElement/>
+				<text><![CDATA[siendo las]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="fe5b4d6a-31c8-4d90-93f0-2743b0bf63c6" x="0" y="69" width="84" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{fechain}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="26fce437-01ea-463e-8ec2-2df35ffd41da" x="84" y="69" width="11" height="20"/>
+				<textElement/>
+				<text><![CDATA[y]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="80ad3434-fc2f-4aaf-94a9-7e826d3092f8" x="95" y="69" width="74" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{fechafin}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="58042734-8fbe-417c-a5fa-7658f1771ca9" x="155" y="18" width="250" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE MENSUAL DE LOS PEDIDOS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="101" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="e790bcbc-635b-4f14-8d1c-3422d23e95d3" x="10" y="1" width="497" height="100"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="fechain">
+					<subreportParameterExpression><![CDATA[$P{fechain}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="logo_izq">
+					<subreportParameterExpression><![CDATA[$P{logo_izq}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="fechafin">
+					<subreportParameterExpression><![CDATA[$P{fechafin}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="logo_der">
+					<subreportParameterExpression><![CDATA[$P{logo_der}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="nombre_bodega">
+					<subreportParameterExpression><![CDATA[$P{nombre_bodega}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="cedula">
+					<subreportParameterExpression><![CDATA[$P{cedula}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="nombre_recibe">
+					<subreportParameterExpression><![CDATA[$P{nombre_recibe}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reporte_Movimiento_funcionarios_mensual_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="131" splitType="Stretch">
+			<textField>
+				<reportElement uuid="b0549820-e856-4f04-8554-f962588cf710" x="50" y="80" width="200" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{nombre_bodega}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2f5368c5-4982-4ea5-8815-d07d75abb26d" x="84" y="0" width="145" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENTREGUE CONFORME]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="dd3a1c06-9d11-42bc-872f-57f1845b4e88" x="285" y="80" width="194" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{nombre_recibe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0b99c7b3-3f6b-47a2-b584-f5450b73aa77" x="331" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECIBÍ CONFORME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="17eccf6b-fa53-41c5-8e0d-aa9ee4f4a276" x="50" y="100" width="200" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENCARGADA/O DE BODEGA STRA]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ca1c5112-c071-4d81-ab60-83f08d011741" x="285" y="100" width="194" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cargo_funcionario_mensual}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
